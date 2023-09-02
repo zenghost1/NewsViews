@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:newsviews/screens/walk2.dart';
 
 class Walk1Screen extends StatelessWidget {
   const Walk1Screen({super.key});
@@ -16,34 +17,34 @@ class Walk1Screen extends StatelessWidget {
             fit: BoxFit.cover,
           ),
           const SizedBox(
-            height: 120,
+            height: 60,
           ),
           const Text(
             'The quickest and',
-            style: TextStyle(fontSize: 40, color: Colors.white),
+            style: TextStyle(fontSize: 35, color: Colors.white),
           ),
           const Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
                 'most ',
-                style: TextStyle(fontSize: 40, color: Colors.white),
+                style: TextStyle(fontSize: 35, color: Colors.white),
               ),
               Text(
                 'Trusted ',
                 style: TextStyle(
-                  fontSize: 40,
+                  fontSize: 35,
                   color: Color(0xFF00CCFF),
                 ),
               ),
               Text(
                 'App',
-                style: TextStyle(fontSize: 40, color: Colors.white),
+                style: TextStyle(fontSize: 35, color: Colors.white),
               )
             ],
           ),
           const SizedBox(
-            height: 60,
+            height: 20,
           ),
           Padding(
             padding: EdgeInsetsDirectional.symmetric(horizontal: 30),
@@ -53,21 +54,21 @@ class Walk1Screen extends StatelessWidget {
             ),
           ),
           const SizedBox(
-            height: 100,
+            height: 90,
           ),
           Positioned(
             bottom: 100,
             child: TextButton(
                 style: ButtonStyle(
                     backgroundColor: MaterialStateProperty.all(Colors.grey)),
-                onPressed: () {},
+                onPressed: () {Navigator.push(context,MaterialPageRoute(builder: (context) => Walk2Screen()) );},
                 child: Container(
                   width: 100,
                   child: const Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       Text('Next',
-                          style: TextStyle(fontSize: 30, color: Colors.white)),
+                          style: TextStyle(fontSize: 20, color: Colors.white)),
                       Icon(
                         Icons.arrow_forward_ios_rounded,
                         color: Colors.white,
