@@ -1,14 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:newsviews/screens/otp.dart';
-import 'package:newsviews/screens/signup.dart';
+import 'package:newsviews/screens/signin.dart';
 import 'package:newsviews/screens/walk3.dart';
-import 'package:newsviews/screens/forgotpass1.dart';
-
-
 // import 'package:google_fonts/google_fonts.dart';
 
-class signin extends StatelessWidget {
-  const signin({super.key});
+class signup extends StatelessWidget {
+  const signup({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -58,22 +55,29 @@ class signin extends StatelessWidget {
                       Align(
                         alignment: Alignment.centerLeft,
                         child: Text(
-                          "Hi There!",
+                          "Create a ",
                           style:
-                              TextStyle(fontFamily:'Sansation-Bold',fontSize: 24, color: Color(0xFFDADADA)),
+                              TextStyle(height: 0.7,fontFamily:'Sansation-Bold',fontSize: 24, color: Color(0xFFDADADA)),
                         ),
                       ),
-                      Padding(padding: EdgeInsets.symmetric(horizontal: 5)),
-                      Image.asset("assets/Waving_Hand_Emoji.png", width: 30),
+                      Text(
+                          "NewsViews ",
+                          style:
+                              TextStyle(height: 0.7,fontFamily:'Sansation-Bold',fontSize: 24, color: Color(0xFF00CCFF)),
+                        ),
+                        
+
+                        
+                      
                     ],
                   ),
                   Align(
                       alignment: Alignment.centerLeft,
                       child: Text(
-                        "Welcome back, Sign in to your account",
-                        style:
-                            TextStyle(fontFamily:'Sansation',fontSize: 14, color: Color(0xFF999999)),
-                      )),
+                          "account",
+                          style:
+                              TextStyle(fontFamily:'Sansation-Bold',fontSize: 24, color: Color(0xFFDADADA)),
+                        ),),
                   Form(
                       child: Container(
                     padding: EdgeInsets.only(top:20,bottom:8 ),
@@ -84,8 +88,52 @@ class signin extends StatelessWidget {
                           decoration: InputDecoration(
                               filled: true,
                               fillColor: Color(0xFFDADADA),
-                              hintText: "Enter Your Email",
+                              hintText: "Enter Your Full Name",
+                              labelText: "Full Name",
+                              contentPadding: const EdgeInsets.symmetric(
+                                  vertical: 4, horizontal: 12),
+                              labelStyle: TextStyle(fontFamily:'Sansation-Bold',
+                                  fontSize: 15, color: Color(0xFF999999)),
+                              hintStyle: TextStyle(fontFamily:'Sansation-Bold',
+                                  fontSize: 13, color: Color(0xFF999999)),
+                              enabledBorder: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(10)),
+                              focusedBorder: OutlineInputBorder(
+                                  borderSide:
+                                      BorderSide(color: Color(0xFF00CCFF)),
+                                  borderRadius: BorderRadius.circular(10))),
+                        ),
+                        const SizedBox(height: 8),
+                        TextFormField(
+                          
+                          decoration: InputDecoration(
+                              filled: true,
+                              fillColor: Color(0xFFDADADA),
+                              hintText: "Enter your Email",
                               labelText: "Email",
+                              
+                              contentPadding: const EdgeInsets.symmetric(
+                                  vertical: 4, horizontal: 12),
+                              labelStyle: TextStyle(fontFamily:'Sansation-Bold',
+                                  fontSize: 15, color: Color(0xFF999999)),
+                              hintStyle: TextStyle(fontFamily:'Sansation-Bold',
+                                  fontSize: 13, color: Color(0xFF999999)),
+                              enabledBorder: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(10)),
+                              focusedBorder: OutlineInputBorder(
+                                  borderSide:
+                                      BorderSide(color: Color(0xFF00CCFF)),
+                                  borderRadius: BorderRadius.circular(10))),
+                        ),
+                        const SizedBox(height: 8),
+                        TextFormField(
+                          
+                          decoration: InputDecoration(
+                              filled: true,
+                              fillColor: Color(0xFFDADADA),
+                              hintText: "Enter Your Phone Number",
+                              labelText: "Phone Number",
+                              
                               contentPadding: const EdgeInsets.symmetric(
                                   vertical: 4, horizontal: 12),
                               labelStyle: TextStyle(fontFamily:'Sansation-Bold',
@@ -127,20 +175,7 @@ class signin extends StatelessWidget {
                     ),
                   )),
                   
-                  Align(
-                    alignment: Alignment.topLeft,
-                    child: TextButton(onPressed: (){
-                        Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => Forgotpass1()));
-                      }, child: Text(
-                          "Forgot Password?",
-                          style:
-                              TextStyle(fontFamily:'Sansation-Bold',fontSize: 13, color: Color(0xFF00CCFF)),
-                        ),)
-                    
-                  ),
+                  
                   Container(
                     padding: const EdgeInsets.symmetric(vertical: 20.0),
                     child: SizedBox(
@@ -154,7 +189,7 @@ class signin extends StatelessWidget {
                               Color(0xFF002E3A)
                             ])),
                         child: ElevatedButton(
-                          child: Text("Sign In",
+                          child: Text("Sign Up",
                               style: TextStyle(fontFamily:'Sansation-Bold',
                                   fontSize: 22,
                                   letterSpacing: 1.5,
@@ -167,7 +202,7 @@ class signin extends StatelessWidget {
                               padding: EdgeInsets.symmetric(
                                   horizontal: 40.0, vertical: 10.0),
                               shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(10.0))),
+                                  borderRadius: BorderRadius.circular(5.0))),
                           onPressed: () {
                             Navigator.push(
                                 context,
@@ -191,7 +226,7 @@ class signin extends StatelessWidget {
                         style: TextStyle(fontFamily:'Sansation-Bold',fontSize: 13, color: Color(0xFF999999))),
                   ),
                   Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Container(
                         padding: const EdgeInsets.symmetric(vertical: 10),
@@ -247,7 +282,7 @@ class signin extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    "Dont have an account?",
+                    "Already have an account",
                     style: TextStyle(fontFamily:'Sansation',fontSize: 13, color: Color(0xFF999999)),
                   ),
                   TextButton(
@@ -255,12 +290,11 @@ class signin extends StatelessWidget {
                         Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => signup()));
+                                    builder: (context) => signin()));
                       },
                       child: Text(
-                        "Sign Up",
+                        "Sign In",
                         style: TextStyle(fontFamily:'Sansation-Bold',fontSize: 15, color: Color(0xFF00CCFF)),
-                        
                       )),
                 ],
               ),
