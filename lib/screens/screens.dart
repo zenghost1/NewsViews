@@ -1,0 +1,1 @@
+export 'package:newsviews/screens/walkthroughscreen.dart';
