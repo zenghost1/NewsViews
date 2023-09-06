@@ -38,6 +38,7 @@ dependencies:
   smooth_page_indicator: ^1.1.0
   material_design_icons_flutter: ^5.0.6595
   google_fonts: ^5.1.0
+  flutter_settings_screens: ^0.3.3-null-safety+2
 
 dev_dependencies:
   flutter_test:
@@ -88,11 +89,13 @@ flutter:
         - asset: fonts/Sansation-Bold.ttf 
         # - asset: fonts/Sansation-Light.ttf
         #   style: light     
-  #   - family: Trajan Pro
-  #     fonts:
-  #       - asset: fonts/TrajanPro.ttf
-  #       - asset: fonts/TrajanPro_Bold.ttf
-  #         weight: 700
-  #
+    - family: Harmattan
+      fonts:
+        - asset: fonts/Harmattan-Regular.ttf
+        # - asset: fonts/TrajanPro_Bold.ttf
+        #   weight: 700
+    - family: Harmattan-Bold
+      fonts:
+        - asset: fonts/Harmattan-Bold.ttf
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
