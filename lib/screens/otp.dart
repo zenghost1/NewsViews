@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:newsviews/screens/alldone.dart';
-import 'package:newsviews/screens/signin.dart';
+// import 'package:newsviews/screens/signin.dart';
 // import 'package:google_fonts/google_fonts.dart';
 
 class otp extends StatelessWidget {

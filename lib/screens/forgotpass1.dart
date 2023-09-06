@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:newsviews/screens/forgotpass2Deprecated.dart';
 import 'package:newsviews/screens/signin.dart';
-import 'package:newsviews/screens/signup.dart';
+// import 'package:newsviews/screens/signup.dart';
 
 // import 'package:google_fonts/google_fonts.dart';
 
