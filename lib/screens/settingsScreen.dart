@@ -5,28 +5,74 @@ import 'package:newsviews/screens/otp.dart';
 // import 'package:google_fonts/google_fonts.dart';
 class settingsScreen extends StatefulWidget {
   const settingsScreen({super.key});
-  
 
   @override
   State<settingsScreen> createState() => _settingsScreenState();
 }
 
 class _settingsScreenState extends State<settingsScreen> {
-  static const keyLanguage="key-Language";
-  
-  
+  static const keyLanguage = "key-Language";
+
   @override
   Widget build(BuildContext context) {
-    Widget buildTellYourFriend()=> SimpleSettingsTile(title: "Tell Your Friend",subtitle: '',leading: Icon(Icons.people_rounded),);
-    Widget buildHelp()=> SimpleSettingsTile(title: "Help",subtitle: '',leading: Icon(Icons.help),);
-    Widget buildAbout()=> SimpleSettingsTile(title: "About",subtitle: '',leading: Icon(Icons.info),);
-    Widget buildLanguage()=> DropDownSettingsTile(title: "Language", settingKey: keyLanguage, selected: 1, values: <int,String>{
-      1:"Eng(Ind)",
-      2:"Hindi"
-    });
+    Widget buildTellYourFriend() => SimpleSettingsTile(
+          title: "Tell Your Friend",
+          subtitle: '',
+          leading: Icon(Icons.people_rounded),
+        );
+    Widget buildHelp() => SimpleSettingsTile(
+          title: "Help",
+          subtitle: '',
+          leading: Icon(Icons.help),
+        );
+    Widget buildAbout() => SimpleSettingsTile(
+          title: "About",
+          subtitle: '',
+          leading: Icon(Icons.info),
+        );
+    Widget buildReportABug() => SimpleSettingsTile(
+          title: "Report A Bug",
+          subtitle: '',
+          leading: Icon(Icons.bug_report_outlined),
+        );
+    Widget buildSendFeedback() => SimpleSettingsTile(
+          title: "Send Feedback",
+          subtitle: '',
+          leading: Icon(Icons.feedback_outlined),
+        );
 
+    Widget buildLanguage() => DropDownSettingsTile(
+        title: "Language",
+        leading: Icon(Icons.language_outlined),
+        settingKey: keyLanguage,
+        selected: 1,
+        values: <int, String>{1: "Eng(Ind)", 2: "Hindi"});
+    Widget buildFontSettings() => SimpleSettingsTile(
+          title: "Font Settings",
+          subtitle: '',
+          leading: Icon(Icons.settings),
+        );
+    Widget buildNotifications() => SimpleSettingsTile(
+          title: "Notifications",
+          subtitle: '',
+          leading: Icon(Icons.notifications_active_outlined),
+        );
+    Widget buildYourBookmarks() => SimpleSettingsTile(
+          title: "Your Bookmarks",
+          subtitle: '',
+          leading: Icon(Icons.bookmark_added_outlined),
+        );
+    Widget buildQuickPreferenceBar() => SimpleSettingsTile(
+          title: "Quick Preference Bar",
+          subtitle: '',
+          leading: Icon(Icons.remove_red_eye_outlined),
+        );
+    Widget buildEraseRelevanceHistory() => SimpleSettingsTile(
+          title: "Erase Relevance History",
+          subtitle: '',
+          leading: Icon(Icons.cancel_outlined),
+        );
 
-    
     return SafeArea(
       child: Scaffold(
         backgroundColor: Color(0xFF060606),
@@ -55,9 +101,11 @@ class _settingsScreenState extends State<settingsScreen> {
                               width: 24,
                               height: 24,
                               decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(100),color: Color(0xFF00ccff)),
+                                  borderRadius: BorderRadius.circular(100),
+                                  color: Color(0xFF00ccff)),
                               child: const Icon(
-                                Icons.mode_edit_outlined,size: 18,
+                                Icons.mode_edit_outlined,
+                                size: 18,
                               ),
                             ))
                       ],
@@ -82,27 +130,42 @@ class _settingsScreenState extends State<settingsScreen> {
                           fontSize: 15,
                           color: Color(0xFF999999)),
                     ),
-                    SizedBox(height: 10),
+                    // SizedBox(height: 10),
                     ListView(
                       shrinkWrap: true,
                       padding: EdgeInsets.all(20),
                       children: [
+                        SettingsGroup(
+                            title: "Interest Configurations",
+                            titleTextStyle: TextStyle(
+                          fontFamily: 'Harmattan-Bold',
+                          
+                          fontSize: 20,
+                          color: Color(0xFFfafafa)),
+                            children: <Widget>[
+                              buildYourBookmarks(),
+                              buildQuickPreferenceBar(),
+                              buildEraseRelevanceHistory()
+                            ]),
+                        const SizedBox(height: 10),
                         SettingsGroup(title: "Settings", children: <Widget>[
-                          buildTellYourFriend(),buildHelp(),buildAbout()
+                          buildLanguage(),
+                          buildFontSettings(),
+                          buildNotifications()
                         ]),
-                        const SizedBox(height:32),
-                        SettingsGroup(title: "Settings", children: <Widget>[
-                          buildLanguage(),buildHelp(),buildAbout()
+                        const SizedBox(height: 10),
+                        SettingsGroup(title: "Feedback", children: <Widget>[
+                          buildReportABug(),
+                          buildSendFeedback()
                         ]),
-                        const SizedBox(height:32),
+                        const SizedBox(height: 10),
                         SettingsGroup(title: "More", children: <Widget>[
-                          buildTellYourFriend(),buildHelp(),buildAbout()
+                          buildTellYourFriend(),
+                          buildHelp(),
+                          buildAbout()
                         ]),
-                        
-
                       ],
                     ),
-                    
                     Container(
                       padding: const EdgeInsets.symmetric(vertical: 15.0),
                       child: SizedBox(
@@ -148,4 +211,3 @@ class _settingsScreenState extends State<settingsScreen> {
     );
   }
 }
-
