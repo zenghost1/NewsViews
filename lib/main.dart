@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:newsviews/screens/walkthroughscreen.dart';
+import 'screens/screens.dart';
 
 void main() {
   runApp(const MyApp());

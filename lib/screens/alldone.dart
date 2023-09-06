@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:newsviews/screens/forgotpass2.dart';
+import 'package:newsviews/screens/forgotpass2Deprecated.dart';
 
 // import 'package:google_fonts/google_fonts.dart';
 
@@ -10,48 +10,52 @@ class alldone extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Color(0xFF060606),
+        backgroundColor: const Color(0xFF060606),
         body: Column(
           children: [
-            
             Container(
-              padding:
-                  const EdgeInsets.symmetric( horizontal: 32.0),
+              padding: const EdgeInsets.symmetric(horizontal: 32.0),
               child: Column(
                 children: [
-                  Padding(padding: EdgeInsets.symmetric(vertical: 80)),
-                  Image.asset("assets/verified.png", width: 60),
-                  Padding(padding: EdgeInsets.symmetric(vertical: 15)),
-                  Row(
+                  const Padding(padding: EdgeInsets.symmetric(vertical: 80)),
+                  Image.asset(
+                    "assets/Verified.png",
+                    // width: 60,
+                    scale: 1.5,
+                  ),
+                  const Padding(padding: EdgeInsets.symmetric(vertical: 15)),
+                  const Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      
-                      
-                        Text(
-                          "All Done!",
-                          style:
-                              TextStyle(fontFamily:'Sansation-Bold',fontSize: 26, color: Color(0xFFDADADA)),
-                        ),
-                        ],
+                      Text(
+                        "All Done!",
+                        style: TextStyle(
+                            fontFamily: 'Sansation-Bold',
+                            fontSize: 26,
+                            color: Color(0xFFDADADA)),
+                      ),
+                    ],
                   ),
-                  Padding(padding: EdgeInsets.symmetric(vertical: 10)),
-                        Text(
-                        "You have been completely verified.",textAlign: TextAlign.center,
-                        style:
-                            TextStyle(height: 0.7,fontFamily:'Sansation',fontSize: 17, color: Color(0xFF999999)),
-                      ),
-                      
-                      
-                      
-                    
-                  Text(
-                        " You're all set to begin!",textAlign: TextAlign.center,
-                        style:
-                            TextStyle(fontFamily:'Sansation',fontSize: 17, color: Color(0xFF999999)),
-                      ),
-                  
-                  
-                  
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  const Text(
+                    "You have been completely verified.",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                        height: 0.7,
+                        fontFamily: 'Sansation',
+                        fontSize: 17,
+                        color: Color(0xFF999999)),
+                  ),
+                  const Text(
+                    " You're all set to begin!",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                        fontFamily: 'Sansation',
+                        fontSize: 17,
+                        color: Color(0xFF999999)),
+                  ),
                   Container(
                     padding: const EdgeInsets.symmetric(vertical: 20.0),
                     child: SizedBox(
@@ -60,13 +64,14 @@ class alldone extends StatelessWidget {
                         decoration: ShapeDecoration(
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(10.0)),
-                            gradient: LinearGradient(colors: [
+                            gradient: const LinearGradient(colors: [
                               Color(0xFF00ACD7),
                               Color(0xFF002E3A)
                             ])),
                         child: ElevatedButton(
-                          child: Text("START",
-                              style: TextStyle(fontFamily:'Sansation-Bold',
+                          child: const Text("START",
+                              style: TextStyle(
+                                  fontFamily: 'Sansation-Bold',
                                   fontSize: 22,
                                   letterSpacing: 2,
                                   fontWeight: FontWeight.w600,
@@ -75,7 +80,7 @@ class alldone extends StatelessWidget {
                               tapTargetSize: MaterialTapTargetSize.shrinkWrap,
                               primary: Colors.transparent,
                               shadowColor: Colors.transparent,
-                              padding: EdgeInsets.symmetric(
+                              padding: const EdgeInsets.symmetric(
                                   horizontal: 40.0, vertical: 10.0),
                               shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(5.0))),
@@ -83,21 +88,15 @@ class alldone extends StatelessWidget {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => Forgotpass2()));
+                                    builder: (context) => const Forgotpass2()));
                           },
                         ),
                       ),
                     ),
                   ),
-                  
-                  
-                  
                 ],
               ),
             ),
-            
-              
-            
           ],
         ),
       ),
