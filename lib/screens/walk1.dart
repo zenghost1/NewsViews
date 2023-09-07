@@ -20,27 +20,25 @@ class Walk1Screen extends StatelessWidget {
             height: 60,
           ),
           Text(
-            'The quickest and',
-            style: TextStyle(fontSize: 35, color: Colors.white),
+            'Revolutionizing',
+            style: TextStyle(fontFamily: "Sansation-Bold",height: 1,fontSize: 35, color: Color(0xffdadada)),
           ),
-          Row(
+          
+              Text(
+                'News Delivery With',
+                style: TextStyle(fontFamily: "Sansation-Bold",height: 1,fontSize: 35, color: Color(0xffdadada)),
+              ),
+              Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                'most ',
-                style: TextStyle(fontSize: 35, color: Colors.white),
-              ),
-              Text(
-                'Trusted ',
+                'Short Videos',
                 style: TextStyle(
-                  fontSize: 35,
+                  fontFamily: "Sansation-Bold",height: 1,fontSize: 35,
                   color: Color(0xFF00CCFF),
                 ),
               ),
-              Text(
-                'App',
-                style: TextStyle(fontSize: 35, color: Colors.white),
-              )
+              
             ],
           ),
           SizedBox(
@@ -49,8 +47,8 @@ class Walk1Screen extends StatelessWidget {
           Padding(
             padding: EdgeInsetsDirectional.symmetric(horizontal: 30),
             child: Text(
-              'Our commitment to speed ensures that you are among the first to know. No more waiting – get breaking , developments, and stories at your fingertips, instantly.',
-              style: TextStyle(fontSize: 16, color: Colors.grey),
+              'Experience news like never before with our engaging app. Dive into intriguing short video news update.',
+              style: TextStyle(fontFamily: "Sansation",height: 1.3,fontSize: 16, color: Color(0xff999999)),
               textAlign: TextAlign.center,
             ),
           ),

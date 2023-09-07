@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_settings_screens/flutter_settings_screens.dart';
+import 'package:newsviews/screens/signin.dart';
+import 'package:newsviews/screens/walk1.dart';
 import 'screens/screens.dart';
 
 
@@ -19,7 +21,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.grey),
         useMaterial3: true,
       ),
-      home: WalkthroughScreen(),
+      home: signin(),
     );
   }
 }

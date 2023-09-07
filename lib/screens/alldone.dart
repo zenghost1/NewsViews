@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:newsviews/screens/forgotpass2Deprecated.dart';
+import 'package:newsviews/screens/interestScreen1.dart';
 
 // import 'package:google_fonts/google_fonts.dart';
 
@@ -88,7 +89,7 @@ class alldone extends StatelessWidget {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => const Forgotpass2()));
+                                    builder: (context) => const interestScreen1()));
                           },
                         ),
                       ),
