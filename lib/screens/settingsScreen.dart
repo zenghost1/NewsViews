@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:newsviews/screens/bookmarkScreen.dart';
 // import 'package:flutter_settings_screens/flutter_settings_screens.dart';
 import 'package:newsviews/screens/otp.dart';
 import 'package:flutter/cupertino.dart';
@@ -1421,7 +1422,7 @@ class _settingsScreenState extends State<settingsScreen> {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => otp()));
+                                      builder: (context) => bookmarkScreen()));
                             },
                           ),
                         ),
