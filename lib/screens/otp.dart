@@ -108,7 +108,7 @@ class otp extends StatelessWidget {
                                   color: Color(0xFF999999)),
                             ),
                             Text(
-                              "pr**************t@gmail.com",
+                              " pr**************t@gmail.com",
                               textAlign: TextAlign.center,
                               style: TextStyle(
                                   height: 0.7,
@@ -132,7 +132,7 @@ class otp extends StatelessWidget {
                       ],
                     ),
                     const SizedBox(
-                      height: 50,
+                      height: 15,
                     ),
                     Form(
                         child: Container(
@@ -193,7 +193,7 @@ class otp extends StatelessWidget {
                       ],
                     ),
                     const SizedBox(
-                      height: 25,
+                      height: 15,
                     ),
                     const Text(
                       "0:40s",

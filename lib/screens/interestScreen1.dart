@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:newsviews/screens/settingsScreen.dart';
+import 'package:flip_card/flip_card.dart';
 
 // import 'package:google_fonts/google_fonts.dart';
 
@@ -18,19 +19,80 @@ class interestScreen1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     List<Map> interestNames = [
-      {"id": 1, "name": "POLITICS", "isSelected": false},
-      {"id": 2, "name": "SPORTS", "isSelected": false},
-      {"id": 3, "name": "TECHNOLOGY", "isSelected": false},
-      {"id": 4, "name": "CRIME", "isSelected": false},
-      {"id": 5, "name": "BUSINESS", "isSelected": false},
-      {"id": 6, "name": "INTERNATIONAL", "isSelected": false},
-      {"id": 7, "name": "HEALTH", "isSelected": false},
-      {"id": 8, "name": "TRAVEL", "isSelected": false},
-      {"id": 9, "name": "CLIMATE", "isSelected": false},
-      {"id": 10, "name": "ENTERTAINMENT", "isSelected": false},
+      {"id": 1, "name": "POLITICS","icon":Icon(Icons.portrait_outlined), "isSelected": false},
+      {"id": 2, "name": "SPORTS","icon":Icon(Icons.portrait_outlined), "isSelected": false},
+      {"id": 3, "name": "TECHNOLOGY","icon":Icon(Icons.portrait_outlined), "isSelected": false},
+      {"id": 4, "name": "CRIME","icon":Icon(Icons.portrait_outlined), "isSelected": false},
+      {"id": 5, "name": "BUSINESS","icon":Icon(Icons.portrait_outlined), "isSelected": false},
+      {"id": 6, "name": "INTERNATIONAL","icon":Icon(Icons.portrait_outlined), "isSelected": false},
+      {"id": 7, "name": "HEALTH","icon":Icon(Icons.portrait_outlined),"isSelected": false},
+      {"id": 8, "name": "TRAVEL","icon":Icon(Icons.portrait_outlined), "isSelected": false},
+      {"id": 9, "name": "CLIMATE","icon":Icon(Icons.portrait_outlined), "isSelected": false},
+      {"id": 10, "name": "ENTERTAINMENT","icon":Icon(Icons.portrait_outlined), "isSelected": false},
+      {"id": 11, "name": "AUTOMOBILES","icon":Icon(Icons.portrait_outlined), "isSelected": false},
     ];
+    
+    Widget customCardFront(String title) {
+      return Material(
+        color: Color.fromRGBO(68, 68, 68, 0.2),
+        shape:
+            RoundedRectangleBorder(borderRadius: BorderRadius.circular(50.0)),
+        elevation: 8.0,
+        child: ListTile(
+          tileColor: Color.fromRGBO(68, 68, 68, 0.2),
+          visualDensity: VisualDensity(vertical: -2),
+
+          shape:
+              RoundedRectangleBorder(borderRadius: BorderRadius.circular(50.0)),
+          titleAlignment: ListTileTitleAlignment.center,
+          // leading:,
+          // onTap:() => onTap(selected!,index),
+          title: Text(title,
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                  height: 1,
+                  fontFamily: 'Sansation-Bold',
+                  fontSize: 14,
+                  letterSpacing: 2,
+                  color: Color(0xFFFAFAFA))),
+          // subtitle:,
+          // trailing: ,
+        ),
+      );
+    }
+    Widget customCardBack(String title) {
+      return Material(
+        color: Color(0xffdadada),
+        shape:
+            RoundedRectangleBorder(borderRadius: BorderRadius.circular(50.0)),
+        elevation: 8.0,
+        child: ListTile(
+          tileColor: Color.fromRGBO(68, 68, 68, 0.2),
+          visualDensity: VisualDensity(vertical: -2),
+
+          shape:
+              RoundedRectangleBorder(borderRadius: BorderRadius.circular(50.0)),
+          titleAlignment: ListTileTitleAlignment.center,
+          // leading:,
+          // onTap:() => onTap(selected!,index),
+          title: Text(title,
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                  height: 1,
+                  fontFamily: 'Sansation-Bold',
+                  fontSize: 14,
+                  letterSpacing: 2,
+                  color: Color(0xff333333))),
+          // subtitle:,
+          // trailing: ,
+        ),
+      );
+    }
+
+    ;
     bool isSelectionMode = false;
     Map<int, bool> selectedFlag = {};
+
     return SafeArea(
       child: Scaffold(
         backgroundColor: Color(0xFF060606),
@@ -88,7 +150,7 @@ class interestScreen1 extends StatelessWidget {
                             color: Color(0xFF999999)),
                       )),
                     ),
-                    SizedBox(height: 20),
+                    SizedBox(height: 10),
                     ListView.builder(
                         shrinkWrap: true,
                         itemBuilder: (context, index) {
@@ -96,32 +158,13 @@ class interestScreen1 extends StatelessWidget {
                           bool selected = data['isSelected'];
                           selectedFlag[index] = selectedFlag[index] ?? false;
                           bool? isSelected = selectedFlag[index];
-                          return Card(
-                            color: Color.fromRGBO(68, 68, 68, 0.2),
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(50.0)),
-                            elevation: 8.0,
-                            margin: const EdgeInsets.all(4),
-                            child: ListTile(
-                              tileColor: Color.fromRGBO(68, 68, 68, 0.2),
-                              visualDensity: VisualDensity(vertical: -2),
-
-                              shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(50.0)),
-                              titleAlignment: ListTileTitleAlignment.center,
-                              // leading:,
-                              // onTap:() => onTap(selected!,index),
-                              title: Text("${data['name']}",
-                                  textAlign: TextAlign.center,
-                                  style: TextStyle(
-                                      height: 1,
-                                      fontFamily: 'Sansation-Bold',
-                                      fontSize: 14,
-                                      letterSpacing: 2,
-                                      color: Color(0xFFFAFAFA))),
-                              // subtitle:,
-                              // trailing: ,
-                            ),
+                          return Container(margin: EdgeInsets.all(3),
+                            child: FlipCard(
+                                direction: FlipDirection.VERTICAL,
+                                speed: 300,
+                                front: customCardFront("${data['name']}"),
+                                back: customCardBack("${data['name']}")),
+                                
                           );
                         },
                         // separatorBuilder:null,

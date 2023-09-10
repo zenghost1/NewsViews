@@ -36,10 +36,12 @@ class bookmarkScreen extends StatelessWidget {
             
           ),
           centerTitle: true,
+          
           title: Text(
                   'BookMarks',
                   style: TextStyle(
-                      fontSize: 24,
+                      fontSize: 22,
+                      letterSpacing: 1,
                       fontFamily: "Sansation-Bold",
                       color: Color(0xffdadada)),
                 )
@@ -60,19 +62,16 @@ class bookmarkScreen extends StatelessWidget {
                     padding: const EdgeInsets.all(8.0),
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(10),
-                      child: Container(
-                        padding: EdgeInsets.all(6),
-                        color: Color(0xff444444).withOpacity(0.5),
-                        child: Row(children: [
-                          Padding(padding: EdgeInsets.symmetric(horizontal: 2)),
-                          Icon(Icons.search_rounded, color: Color(0xffdadada).withOpacity(0.9)),
-                          Padding(padding: EdgeInsets.symmetric(horizontal: 4)),
-                          Text(
-                            'Search',
-                            style: TextStyle(fontFamily: 'Sansation',
-                                color: Color(0xffdadada).withOpacity(0.7), fontSize: 16),
-                          )
-                        ]),
+                      child: TextField(
+                        
+                        style: TextStyle(fontFamily: 'Sansation',
+                                color: Color(0xffdadada), fontSize: 16,height:1),
+                                
+                        // padding: EdgeInsets.all(6),
+                        
+                        decoration: InputDecoration(filled:true,fillColor:Color(0xff444444).withOpacity(0.5),hintStyle: TextStyle(fontFamily: 'Sansation',
+                                color: Color(0xffdadada).withOpacity(0.7), fontSize: 16),hintText: "Search",contentPadding: EdgeInsets.symmetric(vertical: 1),prefixIcon:Icon(Icons.search_rounded, color: Color(0xffdadada).withOpacity(0.9)),border: OutlineInputBorder(borderRadius: BorderRadius.circular(8),borderSide:BorderSide.none ),)
+                        
                       ),
                     ),
                   ),

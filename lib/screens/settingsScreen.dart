@@ -132,7 +132,7 @@ class _settingsScreenState extends State<settingsScreen> {
             children: [
               SizedBox(height: 40,),
               Container(
-                padding: const EdgeInsets.symmetric(horizontal: 26.0),
+                padding: const EdgeInsets.symmetric(horizontal: 12.0),
                 child: Column(
                   children: [
                     Stack(
@@ -213,9 +213,9 @@ class _settingsScreenState extends State<settingsScreen> {
                                     Text(
                                       "Dark Mode",
                                       style: TextStyle(
-                                        fontFamily: 'Harmattan-Bold',
+                                        fontFamily: 'Harmattan',
                                         fontSize: 22,
-                                        letterSpacing: 1.5,
+                                        letterSpacing: 1,
                                         color:
                                             Color(0xFFfafafa).withOpacity(0.7),
                                       ),
@@ -272,7 +272,7 @@ class _settingsScreenState extends State<settingsScreen> {
                                 style: TextStyle(
                                     fontFamily: 'Harmattan-Bold',
                                     fontSize: 22,
-                                    letterSpacing: 1,
+                                    
                                     color: Color(0xFFfafafa).withOpacity(0.7)),
                               )
                             ],
@@ -304,7 +304,8 @@ class _settingsScreenState extends State<settingsScreen> {
                                         style: TextStyle(
                                           fontFamily: 'Harmattan',
                                           fontSize: 21,
-                                          letterSpacing: 1,
+                                          
+                                          
                                           color: Color(0xFFfafafa)
                                               .withOpacity(0.7),
                                         ),
@@ -360,7 +361,7 @@ class _settingsScreenState extends State<settingsScreen> {
                                         style: TextStyle(
                                           fontFamily: 'Harmattan',
                                           fontSize: 21,
-                                          letterSpacing: 1,
+                                          
                                           color: Color(0xFFfafafa)
                                               .withOpacity(0.7),
                                         ),
@@ -383,51 +384,7 @@ class _settingsScreenState extends State<settingsScreen> {
                               ],
                             ),
                           ),
-                          // Padding(
-                          //   padding: const EdgeInsets.symmetric(horizontal: 8),
-                          //   child: Row(
-                          //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          //     children: [
-                          //       Row(
-                          //         children: [
-                          //           Padding(
-                          //               padding: EdgeInsets.symmetric(
-                          //                   horizontal: 5)),
-                          //           Icon(
-                          //             Icons.text_fields_rounded,
-                          //             color: Color(0xFF333333),
-                          //             size: 20,
-                          //           ),
-                          //           Padding(
-                          //               padding: EdgeInsets.symmetric(
-                          //                   horizontal: 7)),
-                          //           Text(
-                          //             "Font Settings",
-                          //             style: TextStyle(
-                          //               fontFamily: 'Harmattan',
-                          //               fontSize: 21,
-                          //               letterSpacing: 1,
-                          //               color:
-                          //                   Color(0xFFfafafa).withOpacity(0.7),
-                          //             ),
-                          //           ),
-                          //         ],
-                          //       ),
-                          //       Row(
-                          //         children: [
-                          //           Icon(
-                          //             Icons.arrow_forward_ios_rounded,
-                          //             color: Color(0xFF333333),
-                          //             size: 17,
-                          //           ),
-                          //           Padding(
-                          //               padding: EdgeInsets.symmetric(
-                          //                   horizontal: 5)),
-                          //         ],
-                          //       ),
-                          //     ],
-                          //   ),
-                          // ),
+                          
                           Divider(
                             thickness: 0.2,
                             color: Color(0xFF333333),
@@ -460,7 +417,7 @@ class _settingsScreenState extends State<settingsScreen> {
                                         style: TextStyle(
                                           fontFamily: 'Harmattan',
                                           fontSize: 21,
-                                          letterSpacing: 1,
+                                          
                                           color: Color(0xFFfafafa)
                                               .withOpacity(0.7),
                                         ),
@@ -514,7 +471,7 @@ class _settingsScreenState extends State<settingsScreen> {
                                 style: TextStyle(
                                     fontFamily: 'Harmattan-Bold',
                                     fontSize: 22,
-                                    letterSpacing: 1,
+                                    
                                     color: Color(0xFFfafafa).withOpacity(0.7)),
                               )
                             ],
@@ -542,11 +499,11 @@ class _settingsScreenState extends State<settingsScreen> {
                                           padding: EdgeInsets.symmetric(
                                               horizontal: 9)),
                                       Text(
-                                        "Notification",
+                                        "Notifications",
                                         style: TextStyle(
                                           fontFamily: 'Harmattan',
                                           fontSize: 21,
-                                          letterSpacing: 1,
+                                          
                                           color: Color(0xFFfafafa)
                                               .withOpacity(0.7),
                                         ),
@@ -593,7 +550,7 @@ class _settingsScreenState extends State<settingsScreen> {
                               style: TextStyle(
                                 fontFamily: 'Harmattan',
                                 fontSize: 21,
-                                letterSpacing: 1,
+                                
                                 color: Color(0xFFfafafa).withOpacity(0.7),
                               ),
                             ),
@@ -632,7 +589,7 @@ class _settingsScreenState extends State<settingsScreen> {
                                           style: TextStyle(
                                             fontFamily: 'Harmattan',
                                             fontSize: 20,
-                                            letterSpacing: 1,
+                                            
                                             color: Color(0xFFfafafa)
                                                 .withOpacity(0.7),
                                           ),
@@ -654,7 +611,7 @@ class _settingsScreenState extends State<settingsScreen> {
                                             style: TextStyle(
                                               fontFamily: 'Harmattan',
                                               fontSize: 18,
-                                              letterSpacing: 1,
+                                              
                                         
                                               
                                               color: Color(0xFFdadada)
@@ -716,7 +673,7 @@ class _settingsScreenState extends State<settingsScreen> {
                                           style: TextStyle(
                                             fontFamily: 'Harmattan',
                                             fontSize: 20,
-                                            letterSpacing: 1,
+                                            
                                             color: Color(0xFFfafafa)
                                                 .withOpacity(0.7),
                                           ),
@@ -738,7 +695,7 @@ class _settingsScreenState extends State<settingsScreen> {
                                             style: TextStyle(
                                               fontFamily: 'Harmattan',
                                               fontSize: 18,
-                                              letterSpacing: 1,
+                                              
                                         
                                               
                                               color: Color(0xFFdadada)
@@ -772,51 +729,7 @@ class _settingsScreenState extends State<settingsScreen> {
                               ),
                             ],
                           ),
-                          // Padding(
-                          //   padding: const EdgeInsets.symmetric(horizontal: 8),
-                          //   child: Row(
-                          //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          //     children: [
-                          //       Row(
-                          //         children: [
-                          //           Padding(
-                          //               padding: EdgeInsets.symmetric(
-                          //                   horizontal: 5)),
-                          //           Icon(
-                          //             Icons.text_fields_rounded,
-                          //             color: Color(0xFF333333),
-                          //             size: 20,
-                          //           ),
-                          //           Padding(
-                          //               padding: EdgeInsets.symmetric(
-                          //                   horizontal: 7)),
-                          //           Text(
-                          //             "Font Settings",
-                          //             style: TextStyle(
-                          //               fontFamily: 'Harmattan',
-                          //               fontSize: 21,
-                          //               letterSpacing: 1,
-                          //               color:
-                          //                   Color(0xFFfafafa).withOpacity(0.7),
-                          //             ),
-                          //           ),
-                          //         ],
-                          //       ),
-                          //       Row(
-                          //         children: [
-                          //           Icon(
-                          //             Icons.arrow_forward_ios_rounded,
-                          //             color: Color(0xFF333333),
-                          //             size: 17,
-                          //           ),
-                          //           Padding(
-                          //               padding: EdgeInsets.symmetric(
-                          //                   horizontal: 5)),
-                          //         ],
-                          //       ),
-                          //     ],
-                          //   ),
-                          // ),
+                         
                           Divider(
                             thickness: 0.2,
                             color: Color(0xFF333333),
@@ -845,7 +758,7 @@ class _settingsScreenState extends State<settingsScreen> {
                                       style: TextStyle(
                                         fontFamily: 'Harmattan',
                                         fontSize: 21,
-                                        letterSpacing: 1,
+                                      letterSpacing: 1,
                                         color:
                                             Color(0xFFfafafa).withOpacity(0.7),
                                       ),
@@ -867,7 +780,7 @@ class _settingsScreenState extends State<settingsScreen> {
                                             style: TextStyle(
                                               fontFamily: 'Harmattan',
                                               fontSize: 18,
-                                              letterSpacing: 1,
+                                              
                                         
                                               
                                               color: Color(0xFFdadada)
@@ -929,7 +842,7 @@ class _settingsScreenState extends State<settingsScreen> {
                                 style: TextStyle(
                                     fontFamily: 'Harmattan-Bold',
                                     fontSize: 22,
-                                    letterSpacing: 1,
+                                    
                                     color: Color(0xFFfafafa).withOpacity(0.7)),
                               )
                             ],
@@ -961,7 +874,7 @@ class _settingsScreenState extends State<settingsScreen> {
                                         style: TextStyle(
                                           fontFamily: 'Harmattan',
                                           fontSize: 21,
-                                          letterSpacing: 1,
+                                          
                                           color: Color(0xFFfafafa)
                                               .withOpacity(0.7),
                                         ),
@@ -1017,7 +930,7 @@ class _settingsScreenState extends State<settingsScreen> {
                                         style: TextStyle(
                                           fontFamily: 'Harmattan',
                                           fontSize: 21,
-                                          letterSpacing: 1,
+                                          
                                           color: Color(0xFFfafafa)
                                               .withOpacity(0.7),
                                         ),
@@ -1040,51 +953,7 @@ class _settingsScreenState extends State<settingsScreen> {
                               ],
                             ),
                           ),
-                          // Padding(
-                          //   padding: const EdgeInsets.symmetric(horizontal: 8),
-                          //   child: Row(
-                          //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          //     children: [
-                          //       Row(
-                          //         children: [
-                          //           Padding(
-                          //               padding: EdgeInsets.symmetric(
-                          //                   horizontal: 5)),
-                          //           Icon(
-                          //             Icons.text_fields_rounded,
-                          //             color: Color(0xFF333333),
-                          //             size: 20,
-                          //           ),
-                          //           Padding(
-                          //               padding: EdgeInsets.symmetric(
-                          //                   horizontal: 7)),
-                          //           Text(
-                          //             "Font Settings",
-                          //             style: TextStyle(
-                          //               fontFamily: 'Harmattan',
-                          //               fontSize: 21,
-                          //               letterSpacing: 1,
-                          //               color:
-                          //                   Color(0xFFfafafa).withOpacity(0.7),
-                          //             ),
-                          //           ),
-                          //         ],
-                          //       ),
-                          //       Row(
-                          //         children: [
-                          //           Icon(
-                          //             Icons.arrow_forward_ios_rounded,
-                          //             color: Color(0xFF333333),
-                          //             size: 17,
-                          //           ),
-                          //           Padding(
-                          //               padding: EdgeInsets.symmetric(
-                          //                   horizontal: 5)),
-                          //         ],
-                          //       ),
-                          //     ],
-                          //   ),
-                          // ),
+                          
                           
                          
                         ],
@@ -1116,7 +985,7 @@ class _settingsScreenState extends State<settingsScreen> {
                                 style: TextStyle(
                                     fontFamily: 'Harmattan-Bold',
                                     fontSize: 22,
-                                    letterSpacing: 1,
+                                    
                                     color: Color(0xFFfafafa).withOpacity(0.7)),
                               )
                             ],
@@ -1148,7 +1017,7 @@ class _settingsScreenState extends State<settingsScreen> {
                                         style: TextStyle(
                                           fontFamily: 'Harmattan',
                                           fontSize: 21,
-                                          letterSpacing: 1,
+                                          
                                           color: Color(0xFFfafafa)
                                               .withOpacity(0.7),
                                         ),
@@ -1204,7 +1073,7 @@ class _settingsScreenState extends State<settingsScreen> {
                                         style: TextStyle(
                                           fontFamily: 'Harmattan',
                                           fontSize: 21,
-                                          letterSpacing: 1,
+                                          
                                           color: Color(0xFFfafafa)
                                               .withOpacity(0.7),
                                         ),
@@ -1227,51 +1096,7 @@ class _settingsScreenState extends State<settingsScreen> {
                               ],
                             ),
                           ),
-                          // Padding(
-                          //   padding: const EdgeInsets.symmetric(horizontal: 8),
-                          //   child: Row(
-                          //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          //     children: [
-                          //       Row(
-                          //         children: [
-                          //           Padding(
-                          //               padding: EdgeInsets.symmetric(
-                          //                   horizontal: 5)),
-                          //           Icon(
-                          //             Icons.text_fields_rounded,
-                          //             color: Color(0xFF333333),
-                          //             size: 20,
-                          //           ),
-                          //           Padding(
-                          //               padding: EdgeInsets.symmetric(
-                          //                   horizontal: 7)),
-                          //           Text(
-                          //             "Font Settings",
-                          //             style: TextStyle(
-                          //               fontFamily: 'Harmattan',
-                          //               fontSize: 21,
-                          //               letterSpacing: 1,
-                          //               color:
-                          //                   Color(0xFFfafafa).withOpacity(0.7),
-                          //             ),
-                          //           ),
-                          //         ],
-                          //       ),
-                          //       Row(
-                          //         children: [
-                          //           Icon(
-                          //             Icons.arrow_forward_ios_rounded,
-                          //             color: Color(0xFF333333),
-                          //             size: 17,
-                          //           ),
-                          //           Padding(
-                          //               padding: EdgeInsets.symmetric(
-                          //                   horizontal: 5)),
-                          //         ],
-                          //       ),
-                          //     ],
-                          //   ),
-                          // ),
+                          
                           Divider(
                             thickness: 0.2,
                             color: Color(0xFF333333),
@@ -1304,7 +1129,7 @@ class _settingsScreenState extends State<settingsScreen> {
                                         style: TextStyle(
                                           fontFamily: 'Harmattan',
                                           fontSize: 21,
-                                          letterSpacing: 1,
+                                          
                                           color: Color(0xFFfafafa)
                                               .withOpacity(0.7),
                                         ),
@@ -1332,54 +1157,7 @@ class _settingsScreenState extends State<settingsScreen> {
                       ),
                     ),
 
-                    // ListView(
-                    //   shrinkWrap: true,
-
-                    //   children: [
-                    //     SettingsGroup(
-                    //         title: "Interest Configurations",
-
-                    //         titleTextStyle: TextStyle(
-                    //       fontFamily: 'Harmattan-Bold',
-
-                    //       fontSize: 18,
-                    //       color: Color(0xFFfafafa)),
-                    //         children: <Widget>[
-                    //           buildYourBookmarks(),
-                    //           buildQuickPreferenceBar(),
-                    //           buildEraseRelevanceHistory()
-                    //         ]),
-                    //     const SizedBox(height: 10),
-                    //     SettingsGroup(title: "Settings",titleTextStyle: TextStyle(
-                    //       fontFamily: 'Harmattan-Bold',
-
-                    //       fontSize: 18,
-                    //       color: Color(0xFFfafafa)), children: <Widget>[
-                    //       buildLanguage(),
-                    //       buildFontSettings(),
-                    //       buildNotifications()
-                    //     ]),
-                    //     const SizedBox(height: 10),
-                    //     SettingsGroup(title: "Feedback",titleTextStyle: TextStyle(
-                    //       fontFamily: 'Harmattan-Bold',
-
-                    //       fontSize: 18,
-                    //       color: Color(0xFFfafafa)), children: <Widget>[
-                    //       buildReportABug(),
-                    //       buildSendFeedback()
-                    //     ]),
-                    //     const SizedBox(height: 10),
-                    //     SettingsGroup(title: "More",titleTextStyle: TextStyle(
-                    //       fontFamily: 'Harmattan-Bold',
-
-                    //       fontSize: 18,
-                    //       color: Color(0xFFfafafa)), children: <Widget>[
-                    //       buildTellYourFriend(),
-                    //       buildHelp(),
-                    //       buildAbout()
-                    //     ]),
-                    //   ],
-                    // ),
+                    
                     Container(
                       padding: const EdgeInsets.symmetric(vertical: 15.0),
                       child: SizedBox(

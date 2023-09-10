@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_settings_screens/flutter_settings_screens.dart';
+import 'package:newsviews/screens/screens.dart';
 import 'package:newsviews/screens/signin.dart';
-import 'package:newsviews/screens/walk1.dart';
-import 'screens/screens.dart';
-
+import 'package:newsviews/screens/splashScreen.dart';
 
 Future main() async{
   await Settings.init(cacheProvider:SharePreferenceCache());

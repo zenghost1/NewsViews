@@ -21,13 +21,13 @@ class bookmarkGrid extends StatelessWidget {
             return Padding(
               padding: const EdgeInsets.all(2),
               child: Container(
-                decoration: BoxDecoration(color: Color(0xff444444).withOpacity(0.5),image:DecorationImage(image: AssetImage("assets/homebg.jpg"),fit: BoxFit.cover),borderRadius: BorderRadius.circular(10)),child:Column(mainAxisAlignment: MainAxisAlignment.spaceBetween,children: [
+                decoration: BoxDecoration(color: Color(0xff444444).withOpacity(0.5),image:DecorationImage(image: AssetImage("assets/modi.jpg"),opacity: 0.5,fit: BoxFit.cover),borderRadius: BorderRadius.circular(10)),child:Column(mainAxisAlignment: MainAxisAlignment.spaceBetween,children: [
                   Column(
                     children: [
                       Padding(padding:EdgeInsets.symmetric(vertical: 2)),
                       Wrap(
                     children: [
-                      Text("This is the day when G20 Summit was started",textAlign: TextAlign.center,style: TextStyle(height: 1,fontSize: 12,color: Color(0xffdadada).withOpacity(0.9)),),
+                      Text("This is the day when G20 Summit was started",textAlign: TextAlign.center,style: TextStyle(fontFamily: "Sansation",height: 1,fontSize: 12,color: Color(0xffdadada).withOpacity(0.9)),),
                     ],
                   ),
                     ],
