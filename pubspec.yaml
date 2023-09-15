@@ -40,6 +40,7 @@ dependencies:
   flutter_settings_screens: ^0.3.3-null-safety+2
   flutter_native_splash: ^2.3.0
   flip_card: ^0.7.0
+  action_slider: ^0.7.0
 
 flutter_native_splash:
   # branding: assets/newsViewsLogo.png
@@ -108,5 +109,9 @@ flutter:
     - family: Harmattan-Bold
       fonts:
         - asset: fonts/Harmattan-Bold.ttf
+
+    - family: RubikOne
+      fonts:
+        - asset: fonts/RubikOne-Regular.ttf
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages

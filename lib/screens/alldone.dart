@@ -17,13 +17,13 @@ class alldone extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 32.0),
               child: Column(
                 children: [
-                  const Padding(padding: EdgeInsets.symmetric(vertical: 80)),
+                  const Padding(padding: EdgeInsets.symmetric(vertical: 100)),
                   Image.asset(
                     "assets/verified.png",
                     width: 80,
                     scale: 1.5,
                   ),
-                  const Padding(padding: EdgeInsets.symmetric(vertical: 15)),
+                  const Padding(padding: EdgeInsets.symmetric(vertical: 10)),
                   const Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -57,7 +57,7 @@ class alldone extends StatelessWidget {
                         color: Color(0xFF999999)),
                   ),
                   Container(
-                    padding: const EdgeInsets.symmetric(vertical: 20.0),
+                    padding: const EdgeInsets.symmetric(vertical: 30.0),
                     child: SizedBox(
                       width: double.infinity,
                       child: Container(

@@ -132,11 +132,11 @@ class otp extends StatelessWidget {
                       ],
                     ),
                     const SizedBox(
-                      height: 15,
+                      height: 10,
                     ),
                     Form(
                         child: Container(
-                      padding: const EdgeInsets.only(top: 20, bottom: 8),
+                      padding: const EdgeInsets.only(top: 8, bottom: 8),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -193,7 +193,7 @@ class otp extends StatelessWidget {
                       ],
                     ),
                     const SizedBox(
-                      height: 15,
+                      height: 10,
                     ),
                     const Text(
                       "0:40s",

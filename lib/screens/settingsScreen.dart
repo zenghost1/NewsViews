@@ -617,8 +617,8 @@ class _settingsScreenState extends State<settingsScreen> {
                                               color: Color(0xFFdadada)
                                                   .withOpacity(0.7),
                                             ),
-                                            hint: Text("Select Size",style: TextStyle(fontSize: 16,color: Color(0xFFdadada).withOpacity(0.7)), ),
-                                            disabledHint: Text("Select Size"),
+                                            hint: Text("Select",style: TextStyle(fontSize: 16,color: Color(0xFFdadada).withOpacity(0.7)), ),
+                                            disabledHint: Text("Select"),
                                             icon: Icon(Icons.keyboard_arrow_down_rounded,color: Color(0xFF344444),
                                                                               size: 20,),
                                                                               dropdownColor: Color(0xff262626),
@@ -661,7 +661,7 @@ class _settingsScreenState extends State<settingsScreen> {
                                             padding: EdgeInsets.symmetric(
                                                 horizontal: 5)),
                                         Icon(
-                                          Icons.closed_caption_off,
+                                          Icons.text_format,
                                           color: Color(0xFF333333),
                                           size: 20,
                                         ),
@@ -701,8 +701,8 @@ class _settingsScreenState extends State<settingsScreen> {
                                               color: Color(0xFFdadada)
                                                   .withOpacity(0.7),
                                             ),
-                                            hint: Text("Select Size",style: TextStyle(fontSize: 16,color: Color(0xFFdadada).withOpacity(0.7)), ),
-                                            disabledHint: Text("Select Size"),
+                                            hint: Text("Select",style: TextStyle(fontSize: 16,color: Color(0xFFdadada).withOpacity(0.7)), ),
+                                            disabledHint: Text("Select"),
                                             icon: Icon(Icons.keyboard_arrow_down_rounded,color: Color(0xFF344444),
                                                                               size: 20,),
                                                                               dropdownColor: Color(0xff262626),
@@ -786,7 +786,7 @@ class _settingsScreenState extends State<settingsScreen> {
                                               color: Color(0xFFdadada)
                                                   .withOpacity(0.7),
                                             ),
-                                           hint: Text("Select Lang",style: TextStyle(color: Color(0xFFdadada).withOpacity(0.7)), ),
+                                           hint: Text("Select",style: TextStyle(color: Color(0xFFdadada).withOpacity(0.7)), ),
                                             
                                             icon: Icon(Icons.keyboard_arrow_down_rounded,color: Color(0xFF344444),
                                                                               size: 25,),

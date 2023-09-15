@@ -43,7 +43,7 @@ class Forgotpass1 extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 32.0),
               child: Column(
                 children: [
-                  const Padding(padding: EdgeInsets.symmetric(vertical: 50)),
+                  const Padding(padding: EdgeInsets.symmetric(vertical: 100)),
                   Image.asset("assets/fingerprint.png", width: 40),
                   const Padding(padding: EdgeInsets.symmetric(vertical: 10)),
                   const Row(

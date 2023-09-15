@@ -62,7 +62,7 @@ class _signinState extends State<signin> {
                 padding: const EdgeInsets.symmetric(horizontal: 36.0),
                 child: Column(
                   children: [
-                    const Padding(padding: EdgeInsets.symmetric(vertical: 15)),
+                    const Padding(padding: EdgeInsets.symmetric(vertical:25)),
                     Row(
                       children: [
                         const Align(

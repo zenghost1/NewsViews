@@ -19,19 +19,74 @@ class interestScreen1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     List<Map> interestNames = [
-      {"id": 1, "name": "POLITICS","icon":Icon(Icons.portrait_outlined), "isSelected": false},
-      {"id": 2, "name": "SPORTS","icon":Icon(Icons.portrait_outlined), "isSelected": false},
-      {"id": 3, "name": "TECHNOLOGY","icon":Icon(Icons.portrait_outlined), "isSelected": false},
-      {"id": 4, "name": "CRIME","icon":Icon(Icons.portrait_outlined), "isSelected": false},
-      {"id": 5, "name": "BUSINESS","icon":Icon(Icons.portrait_outlined), "isSelected": false},
-      {"id": 6, "name": "INTERNATIONAL","icon":Icon(Icons.portrait_outlined), "isSelected": false},
-      {"id": 7, "name": "HEALTH","icon":Icon(Icons.portrait_outlined),"isSelected": false},
-      {"id": 8, "name": "TRAVEL","icon":Icon(Icons.portrait_outlined), "isSelected": false},
-      {"id": 9, "name": "CLIMATE","icon":Icon(Icons.portrait_outlined), "isSelected": false},
-      {"id": 10, "name": "ENTERTAINMENT","icon":Icon(Icons.portrait_outlined), "isSelected": false},
-      {"id": 11, "name": "AUTOMOBILES","icon":Icon(Icons.portrait_outlined), "isSelected": false},
+      {
+        "id": 1,
+        "name": "POLITICS",
+        "icon": Icon(Icons.portrait_outlined),
+        "isSelected": false
+      },
+      {
+        "id": 2,
+        "name": "SPORTS",
+        "icon": Icon(Icons.portrait_outlined),
+        "isSelected": false
+      },
+      {
+        "id": 3,
+        "name": "TECHNOLOGY",
+        "icon": Icon(Icons.portrait_outlined),
+        "isSelected": false
+      },
+      {
+        "id": 4,
+        "name": "CRIME",
+        "icon": Icon(Icons.portrait_outlined),
+        "isSelected": false
+      },
+      {
+        "id": 5,
+        "name": "BUSINESS",
+        "icon": Icon(Icons.portrait_outlined),
+        "isSelected": false
+      },
+      {
+        "id": 6,
+        "name": "INTERNATIONAL",
+        "icon": Icon(Icons.portrait_outlined),
+        "isSelected": false
+      },
+      {
+        "id": 7,
+        "name": "HEALTH",
+        "icon": Icon(Icons.portrait_outlined),
+        "isSelected": false
+      },
+      {
+        "id": 8,
+        "name": "TRAVEL",
+        "icon": Icon(Icons.portrait_outlined),
+        "isSelected": false
+      },
+      {
+        "id": 9,
+        "name": "CLIMATE",
+        "icon": Icon(Icons.portrait_outlined),
+        "isSelected": false
+      },
+      {
+        "id": 10,
+        "name": "ENTERTAINMENT",
+        "icon": Icon(Icons.portrait_outlined),
+        "isSelected": false
+      },
+      {
+        "id": 11,
+        "name": "AUTOMOBILES",
+        "icon": Icon(Icons.portrait_outlined),
+        "isSelected": false
+      },
     ];
-    
+
     Widget customCardFront(String title) {
       return Material(
         color: Color.fromRGBO(68, 68, 68, 0.2),
@@ -60,6 +115,7 @@ class interestScreen1 extends StatelessWidget {
         ),
       );
     }
+
     Widget customCardBack(String title) {
       return Material(
         color: Color(0xffdadada),
@@ -100,39 +156,45 @@ class interestScreen1 extends StatelessWidget {
           child: Column(
             children: [
               Container(
-                padding: const EdgeInsets.symmetric(horizontal: 32.0),
+                padding: const EdgeInsets.symmetric(horizontal: 26.0),
                 child: Column(
                   children: [
-                    Padding(padding: EdgeInsets.symmetric(vertical: 20)),
+                    Padding(padding: EdgeInsets.symmetric(vertical: 10)),
                     Container(
-                      child: Row(
+                      child: Row(mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Align(
-                            // alignment: Alignment.centerLeft,
-                            child: Text(
-                              "Choose your top ",
-                              style: TextStyle(
-                                  height: 0.7,
-                                  fontFamily: 'Sansation-Bold',
-                                  fontSize: 24,
-                                  color: Color(0xFFDADADA)),
+                          
+                            
+                            Padding(
+                              padding: const EdgeInsets.only(bottom: 25),
+                              child: Text(
+                                "Choose your top ",
+                                style: TextStyle(
+                                    height: 0.7,
+                                    fontFamily: 'Sansation-Bold',
+                                    fontSize: 24,
+                                    color: Color(0xFFDADADA)),
+                              ),
                             ),
-                          ),
+                          
                           Text(
                             "3",
                             style: TextStyle(
                                 height: 0.7,
-                                fontFamily: 'Sansation-Bold',
-                                fontSize: 24,
+                                fontFamily: 'RubikOne',
+                                fontSize: 50,
                                 color: Color(0xFF00CCFF)),
                           ),
-                          Text(
-                            "Interests",
-                            style: TextStyle(
-                                height: 0.7,
-                                fontFamily: 'Sansation-Bold',
-                                fontSize: 24,
-                                color: Color(0xFF00CCFF)),
+                          Padding(
+                            padding: const EdgeInsets.only(top: 16),
+                            child: Text(
+                              " Interests",
+                              style: TextStyle(
+                                  height: 0.7,
+                                  fontFamily: 'Sansation-Bold',
+                                  fontSize: 24,
+                                  color: Color(0xFF00CCFF)),
+                            ),
                           ),
                         ],
                       ),
@@ -158,13 +220,13 @@ class interestScreen1 extends StatelessWidget {
                           bool selected = data['isSelected'];
                           selectedFlag[index] = selectedFlag[index] ?? false;
                           bool? isSelected = selectedFlag[index];
-                          return Container(margin: EdgeInsets.all(3),
+                          return Container(
+                            margin: EdgeInsets.all(3),
                             child: FlipCard(
                                 direction: FlipDirection.VERTICAL,
                                 speed: 300,
                                 front: customCardFront("${data['name']}"),
                                 back: customCardBack("${data['name']}")),
-                                
                           );
                         },
                         // separatorBuilder:null,
@@ -172,20 +234,40 @@ class interestScreen1 extends StatelessWidget {
                     Container(
                       padding: const EdgeInsets.symmetric(vertical: 15.0),
                       child: SizedBox(
+                        height: 49,
                         width: 160,
                         child: Container(
                           decoration: ShapeDecoration(
                               shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(50.0)),
-                              color: Color.fromRGBO(68, 68, 68, 0.1)),
+                              color: Color(0xff999999).withOpacity(0.1)),
                           child: ElevatedButton(
-                            child: Text("NEXT",
-                                style: TextStyle(
-                                    fontFamily: 'Sansation-Bold',
-                                    fontSize: 20,
-                                    letterSpacing: 1.5,
-                                    fontWeight: FontWeight.w600,
-                                    color: Color(0xFF00CCff))),
+                            child: Container(
+                              // padding: EdgeInsets.symmetric(
+                              //     horizontal: 9, vertical: 4),
+                              height: 49,
+                              width: 100,
+                              child: const Row(
+                                mainAxisSize: MainAxisSize.min,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceEvenly,
+                                children: [
+                                  Text('Next',
+                                      style: TextStyle(
+                                          fontFamily: 'Sansation-Bold',
+                                          fontSize: 20,
+                                          letterSpacing: 1.5,
+                                          fontWeight: FontWeight.w600,
+                                          color: Color(0xFF00CCff))),
+                                  Icon(
+                                    Icons.arrow_forward_ios_rounded,
+                                    color: Color(0xff00ccff),
+                                    size: 18,
+                                   
+                                  )
+                                ],
+                              ),
+                            ),
                             style: ElevatedButton.styleFrom(
                                 tapTargetSize: MaterialTapTargetSize.shrinkWrap,
                                 primary: Colors.transparent,
