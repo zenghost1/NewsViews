@@ -20,13 +20,13 @@ class Walk2Screen extends StatelessWidget {
             height: 60,
           ),
           Text(
-            'Swipe To Refine',
-            style: TextStyle(fontSize: 35, color: Colors.white, height: 1),
+            'Elevate Your News',
+            style: TextStyle(fontFamily: "Sansation-Bold",height: 1,fontSize: 35, color: Color(0xffdadada)),
           ),
 
           Text(
-            'Your News ',
-            style: TextStyle(fontSize: 35, color: Colors.white),
+            'Experience with a',
+            style: TextStyle(fontFamily: "Sansation-Bold",height: 1,fontSize: 35, color: Color(0xffdadada)),
           ),
           // Text(
           //   'News ',
@@ -36,20 +36,20 @@ class Walk2Screen extends StatelessWidget {
           //   ),
           // ),
           Text(
-            'Preferences',
+            'Swipe',
             style: TextStyle(
-              fontSize: 38,
+              fontFamily: "Sansation-Bold",height: 1,fontSize: 35,
               color: Color(0xFF00CCFF),
             ),
           ),
           SizedBox(
-            height: 10,
+            height: 20,
           ),
           Padding(
             padding: EdgeInsetsDirectional.symmetric(horizontal: 30),
             child: Text(
-              "Swipe right for what matters, left for what doesn't. Refine your experience.",
-              style: TextStyle(fontSize: 16, color: Colors.grey),
+              "Swipe right for what matters, left for what doesn't. Fine-tune your preferences with a simple swipe.",
+              style: TextStyle(fontFamily: "Sansation",height: 1.3,fontSize: 16, color: Color(0xff999999)),
               textAlign: TextAlign.center,
             ),
           )

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:newsviews/screens/forgotpass2Deprecated.dart';
+import 'package:newsviews/screens/interestScreen1.dart';
 
 // import 'package:google_fonts/google_fonts.dart';
 
@@ -19,8 +19,8 @@ class alldone extends StatelessWidget {
                 children: [
                   const Padding(padding: EdgeInsets.symmetric(vertical: 80)),
                   Image.asset(
-                    "assets/Verified.png",
-                    // width: 60,
+                    "assets/verified.png",
+                    width: 80,
                     scale: 1.5,
                   ),
                   const Padding(padding: EdgeInsets.symmetric(vertical: 15)),
@@ -88,7 +88,7 @@ class alldone extends StatelessWidget {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => const Forgotpass2()));
+                                    builder: (context) => const interestScreen1()));
                           },
                         ),
                       ),

@@ -21,31 +21,29 @@ class Walk3Screen extends StatelessWidget {
           ),
           Text(
             'Serving News in ',
-            style: TextStyle(fontSize: 35, color: Colors.white, height: 1),
+            style: TextStyle(fontFamily: "Sansation-Bold",height: 1,fontSize: 35, color: Color(0xffdadada)),
           ),
-          Wrap(
-            children: [
+          
               Text(
-                'Your ',
-                style: TextStyle(fontSize: 35, color: Colors.white),
+                'Your Best',
+                style: TextStyle(fontFamily: "Sansation-Bold",height: 1,fontSize: 35, color: Color(0xffdadada)),
               ),
               Text(
                 'Flavour',
                 style: TextStyle(
-                  fontSize: 35,
+                  fontFamily: "Sansation-Bold",height: 1,fontSize: 35,
                   color: Color(0xFF00CCFF),
                 ),
-              )
-            ],
-          ),
+              ),
+            
           SizedBox(
             height: 20,
           ),
           Padding(
             padding: EdgeInsetsDirectional.symmetric(horizontal: 30),
             child: Text(
-              "Tailored precisely to your preferences. Our AI algorithms learn from your interactions, ensuring the content you see aligns perfectly with your interests.",
-              style: TextStyle(fontSize: 16, color: Colors.grey),
+              "Tailored just for you, our advanced AI evolves with your interactions, ensuring every content piece perfectly aligns with your interests.",
+              style: TextStyle(fontFamily: "Sansation",height: 1.3,fontSize: 16, color: Color(0xff999999)),
               textAlign: TextAlign.center,
             ),
           ),
