@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import '../core/themes/themes.dart';
 
 class walkImage extends StatelessWidget {
   final String path;

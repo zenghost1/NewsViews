@@ -3,7 +3,6 @@ import 'package:newsviews/core/themes/themes.dart';
 import 'package:newsviews/screens/alldone.dart';
 import 'package:newsviews/widgets/backButton.dart';
 import 'package:newsviews/widgets/boldTextFuncs.dart';
-import 'package:newsviews/widgets/formField.dart';
 import 'package:newsviews/widgets/normalTextFuncs.dart';
 import 'package:newsviews/widgets/obsecureFormField.dart';
 import 'package:newsviews/widgets/onBoardingButton.dart';

@@ -1,7 +1,6 @@
 
 import 'package:flutter/material.dart';
 
-import '../core/themes/themes.dart';
 
 class backMiddleButton extends StatelessWidget {
   final String textName;

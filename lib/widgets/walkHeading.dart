@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import '../core/themes/themes.dart';
 
 class walkHeading extends StatelessWidget {
   final String text;

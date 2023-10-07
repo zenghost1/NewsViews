@@ -6,7 +6,6 @@ import 'package:newsviews/screens/signup.dart';
 import 'package:newsviews/widgets/backButton.dart';
 import 'package:newsviews/widgets/backMiddleButton.dart';
 import 'package:newsviews/widgets/boldTextFuncs.dart';
-import 'package:newsviews/widgets/formField.dart';
 import 'package:newsviews/widgets/normalTextFuncs.dart';
 import 'package:newsviews/widgets/obsecureFormField.dart';
 import 'package:newsviews/widgets/onBoardingButton.dart';
