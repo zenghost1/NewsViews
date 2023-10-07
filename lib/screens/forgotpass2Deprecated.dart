@@ -1,9 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:newsviews/core/themes/themes.dart';
 import 'package:newsviews/screens/alldone.dart';
-import 'package:newsviews/screens/forgotpass1.dart';
 import 'package:newsviews/screens/signin.dart';
 import 'package:newsviews/screens/signup.dart';
-// import 'package:google_fonts/google_fonts.dart';
+import 'package:newsviews/widgets/backButton.dart';
+import 'package:newsviews/widgets/backMiddleButton.dart';
+import 'package:newsviews/widgets/boldTextFuncs.dart';
+import 'package:newsviews/widgets/formField.dart';
+import 'package:newsviews/widgets/normalTextFuncs.dart';
+import 'package:newsviews/widgets/obsecureFormField.dart';
+import 'package:newsviews/widgets/onBoardingButton.dart';
 
 class Forgotpass2 extends StatelessWidget {
   const Forgotpass2({super.key});
@@ -12,61 +18,27 @@ class Forgotpass2 extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Color(0xFF060606),
+        backgroundColor: darkbgcolor,
         body: Column(
           children: [
-            Align(alignment: Alignment.centerLeft,
+            Align(
+              alignment: Alignment.centerLeft,
               child: Container(
-                padding: EdgeInsets.only(top: 20,left: 8),
-                child:Row(
+                padding: EdgeInsets.only(top: 20, left: 8),
+                child: Row(
                   children: [
-                    TextButton(
-                              style: ButtonStyle(
-                                  minimumSize: MaterialStateProperty.all<Size>(
-                                      Size.fromRadius(22)),
-                                  shape: MaterialStateProperty.all<OutlinedBorder>(
-                                      CircleBorder()),
-                                  backgroundColor:
-                                      MaterialStateProperty.all(Color(0xFF444444))),
-                              onPressed: () {
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) => Forgotpass1()));
-                              },
-                              child: Container(
-                                width: 30,
-                                child: const Row(
-                                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                                  children: [
-                                    Icon(
-                                      Icons.arrow_back_ios_new_rounded,
-                                      color: Color(0xFF00CCFF),
-                                    )
-                                  ],
-                                ),
-                              )),
-                              Spacer(),
-                              TextButton(
-                      onPressed:(){
-                        Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => signup()));
-                      },
-                      child: Text(
-                        "Create an account",
-                        style: TextStyle(decoration: TextDecoration.underline,decorationColor: Color(0xFF00CCFF) ,fontFamily:'Sansation-Bold',fontSize: 14, color: Color(0xFF00CCFF)),
-                        
-                      )),
-
+                    backButton(),
+                    Spacer(),
+                    buttonTopRight(
+                      buttonText: "Create an account",
+                      whereTo: signup(),
+                    ),
                   ],
-                  
-                ),),
+                ),
+              ),
             ),
             Container(
-              padding:
-                  const EdgeInsets.symmetric( horizontal: 32.0),
+              padding: const EdgeInsets.symmetric(horizontal: 32.0),
               child: Column(
                 children: [
                   Padding(padding: EdgeInsets.symmetric(vertical: 50)),
@@ -75,149 +47,81 @@ class Forgotpass2 extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      
-                      
-                        Text(
-                          "Reset Password",
-                          style:
-                              TextStyle(fontFamily:'Sansation-Bold',fontSize: 24, color: Color(0xFFDADADA)),
-                        ),
-                      
-                      
-                      
+                      boldTextFuncs(s:"Reset Password"),
                     ],
                   ),
                   Align(
                       alignment: Alignment.center,
-                      child: Text(
-                        "Set your new password, it must be atleast 8 digits.",
-                        style:
-                            TextStyle(fontFamily:'Sansation',fontSize: 13, color: Color(0xFF999999)),
-                      )),
+                      child: normalTextFuncs(s:
+                          "Set your new password, it must be atleast 8 digits.")),
                   Form(
                       child: Container(
-                    padding: EdgeInsets.only(top:20,bottom:8 ),
+                    padding: EdgeInsets.only(top: 20, bottom: 8),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        TextFormField(
-                          obscureText: true,
-                          decoration: InputDecoration(
-                              filled: true,
-                              fillColor: Color(0xFFDADADA),
-                              hintText: "Enter Your Password",
-                              labelText: "Password",
-                              suffixIcon: IconButton(
-                                  onPressed: null,
-                                  icon: Icon(Icons.remove_red_eye_sharp)),
-                              contentPadding: const EdgeInsets.symmetric(
-                                  vertical: 4, horizontal: 12),
-                              labelStyle: TextStyle(fontFamily:'Sansation-Bold',
-                                  fontSize: 15, color: Color(0xFF999999)),
-                              hintStyle: TextStyle(fontFamily:'Sansation-Bold',
-                                  fontSize: 13, color: Color(0xFF999999)),
-                              enabledBorder: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(10)),
-                              focusedBorder: OutlineInputBorder(
-                                  borderSide:
-                                      BorderSide(color: Color(0xFF00CCFF)),
-                                  borderRadius: BorderRadius.circular(10))),
+                        obsecureFormField(
+                          hint: "Enter Your Password",
+                          label: "Password",
+                          
                         ),
                         const SizedBox(height: 8),
-                        TextFormField(
-                          obscureText: true,
-                          decoration: InputDecoration(
-                              filled: true,
-                              fillColor: Color(0xFFDADADA),
-                              hintText: "Enter the Password",
-                              labelText: "Confirm Password",
-                              
-                              contentPadding: const EdgeInsets.symmetric(
-                                  vertical: 4, horizontal: 12),
-                              labelStyle: TextStyle(fontFamily:'Sansation-Bold',
-                                  fontSize: 15, color: Color(0xFF999999)),
-                              hintStyle: TextStyle(fontFamily:'Sansation-Bold',
-                                  fontSize: 13, color: Color(0xFF999999)),
-                              enabledBorder: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(10)),
-                              focusedBorder: OutlineInputBorder(
-                                  borderSide:
-                                      BorderSide(color: Color(0xFF00CCFF)),
-                                  borderRadius: BorderRadius.circular(10))),
-                        ),
-                        
-                        
+                        obsecureFormField(
+                            hint: "Enter the Password",
+                            label: "Confirm Password",
+                            )
                       ],
                     ),
                   )),
-                  
-                  
                   Container(
-                    padding: const EdgeInsets.symmetric(vertical: 10.0),
-                    child: SizedBox(
-                      width: double.infinity,
-                      child: Container(
-                        decoration: ShapeDecoration(
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(10.0)),
-                            gradient: LinearGradient(colors: [
-                              Color(0xFF00ACD7),
-                              Color(0xFF002E3A)
-                            ])),
-                        child: ElevatedButton(
-                          child: Text("Reset Password",
-                              style: TextStyle(fontFamily:'Sansation-Bold',
-                                  fontSize: 22,
-                                  letterSpacing: 1.5,
-                                  fontWeight: FontWeight.w600,
-                                  color: Color(0xFFdadada))),
-                          style: ElevatedButton.styleFrom(
-                              tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-                              primary: Colors.transparent,
-                              shadowColor: Colors.transparent,
-                              padding: EdgeInsets.symmetric(
-                                  horizontal: 40.0, vertical: 10.0),
-                              shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(5.0))),
-                          onPressed: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => alldone()));
-                          },
-                        ),
-                      ),
-                    ),
-                  ),
-                  
-                  
-                  
+                      padding: const EdgeInsets.symmetric(vertical: 10.0),
+                      child: onboardingButton(
+                          name: "Reset Password", screenName: alldone())),
                 ],
               ),
             ),
             Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  TextButton(
-                      onPressed:(){
-                        Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => signin()));
-                      },
-                      child: Text(
-                        "<  Back to login",
-                        style: TextStyle(fontFamily:'Sansation',fontSize: 13, color: Color(0xFF999999)),
-                        
-                      )),
-                  
-                  
-                ],
-              ),
-            
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                backMiddleButton(
+                  textName: "<  Back to login",
+                  whereTo: signin(),
+                ),
+              ],
+            ),
           ],
         ),
       ),
     );
   }
 }
+
+class buttonTopRight extends StatelessWidget {
+  final String buttonText;
+  final Widget whereTo;
+  const buttonTopRight({
+    required this.buttonText,
+    required this.whereTo,
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return TextButton(
+        onPressed: () {
+          Navigator.push(
+              context, MaterialPageRoute(builder: (context) => whereTo));
+        },
+        child: Text(
+          buttonText,
+          style: TextStyle(
+              decoration: TextDecoration.underline,
+              decorationColor: blueaccent,
+              fontFamily: 'Sansation-Bold',
+              fontSize: 14,
+              color: blueaccent),
+        ));
+  }
+}
+
+

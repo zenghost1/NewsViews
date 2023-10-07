@@ -1,9 +1,10 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:newsviews/screens/signin.dart';
+import 'package:newsviews/core/themes/themes.dart';
+// import 'package:newsviews/screens/signin.dart';
 import 'package:newsviews/screens/walkthroughscreen.dart';
-import 'package:flutter_native_splash/flutter_native_splash.dart';
+// import 'package:flutter_native_splash/flutter_native_splash.dart';
 
 class splashScreen extends StatefulWidget {
   const splashScreen({super.key});
@@ -50,7 +51,7 @@ class _splashScreenState extends State<splashScreen> {
                 style: TextStyle(
                     fontFamily: "Sansation-Bold",
                     fontSize: 34,
-                    color: Color(0xfffafafa).withOpacity(0.9)),
+                    color: white2.withOpacity(0.9)),
               )
             ],
           ),

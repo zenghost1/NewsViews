@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:newsviews/screens/homescreen.dart';
 import 'package:newsviews/screens/settingsScreen.dart';
 import 'package:flip_card/flip_card.dart';
 
@@ -280,7 +281,7 @@ class interestScreen1 extends StatelessWidget {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => settingsScreen()));
+                                      builder: (context) => HomeScreen()));
                             },
                           ),
                         ),

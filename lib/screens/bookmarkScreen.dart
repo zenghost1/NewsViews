@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:newsviews/core/themes/themes.dart';
 
 import 'package:newsviews/util/bookmarkGrid.dart';
+import 'package:newsviews/widgets/backButton.dart';
+import 'package:newsviews/widgets/boldTextFuncs.dart';
 
 // import 'package:google_fonts/google_fonts.dart';
 
@@ -11,47 +14,16 @@ class bookmarkScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: const Color(0xFF060606),
+        backgroundColor: darkbgcolor,
         appBar: AppBar(
-          surfaceTintColor: Colors.transparent,
-          shadowColor: Colors.transparent,
-          // scrolledUnderElevation: 1,
-          // elevation: 0.0,
-          backgroundColor: Colors.transparent,
-          leading: IconButton(
-            style: ButtonStyle(
-                minimumSize:
-                    MaterialStateProperty.all<Size>(const Size.fromRadius(22)),
-                shape: MaterialStateProperty.all<OutlinedBorder>(
-                    const CircleBorder()),
-                backgroundColor: MaterialStateProperty.all(
-                    const Color(0xFF444444).withOpacity(0.6))),
-            icon: const Icon(
-              Icons.arrow_back_ios_new_rounded,
-              weight: 40,
-              size: 22,
-              color: Color(0xFF00CCFF),
-            ),
-            onPressed: () => Navigator.of(context).pop(),
-            
-          ),
-          centerTitle: true,
-          
-          title: Text(
-                  'BookMarks',
-                  style: TextStyle(
-                      fontSize: 22,
-                      letterSpacing: 1,
-                      fontFamily: "Sansation-Bold",
-                      color: Color(0xffdadada)),
-                )
-              
-        
-             
-                
-            
-          ),
-        
+            surfaceTintColor: Colors.transparent,
+            shadowColor: Colors.transparent,
+            // scrolledUnderElevation: 1,
+            // elevation: 0.0,
+            backgroundColor: Colors.transparent,
+            leading: backButton(),
+            centerTitle: true,
+            title: boldTextFuncs(s: "Bookmarks")),
         body: Column(
           children: [
             Container(
@@ -63,16 +35,26 @@ class bookmarkScreen extends StatelessWidget {
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(10),
                       child: TextField(
-                        
-                        style: TextStyle(fontFamily: 'Sansation',
-                                color: Color(0xffdadada), fontSize: 16,height:1),
-                                
-                        // padding: EdgeInsets.all(6),
-                        
-                        decoration: InputDecoration(filled:true,fillColor:Color(0xff444444).withOpacity(0.5),hintStyle: TextStyle(fontFamily: 'Sansation',
-                                color: Color(0xffdadada).withOpacity(0.7), fontSize: 16),hintText: "Search",contentPadding: EdgeInsets.symmetric(vertical: 1),prefixIcon:Icon(Icons.search_rounded, color: Color(0xffdadada).withOpacity(0.9)),border: OutlineInputBorder(borderRadius: BorderRadius.circular(8),borderSide:BorderSide.none ),)
-                        
-                      ),
+                          style: TextStyle(
+                              fontFamily: 'Sansation',
+                              color: white3,
+                              fontSize: 16,
+                              height: 1),
+                          decoration: InputDecoration(
+                            filled: true,
+                            fillColor: grey2.withOpacity(0.5),
+                            hintStyle: TextStyle(
+                                fontFamily: 'Sansation',
+                                color: white3.withOpacity(0.7),
+                                fontSize: 16),
+                            hintText: "Search",
+                            contentPadding: EdgeInsets.symmetric(vertical: 1),
+                            prefixIcon: Icon(Icons.search_rounded,
+                                color: white3.withOpacity(0.9)),
+                            border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(8),
+                                borderSide: BorderSide.none),
+                          )),
                     ),
                   ),
                 ],

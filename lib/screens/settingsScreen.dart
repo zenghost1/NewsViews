@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:newsviews/core/themes/themes.dart';
 import 'package:newsviews/screens/bookmarkScreen.dart';
 // import 'package:flutter_settings_screens/flutter_settings_screens.dart';
-import 'package:newsviews/screens/otp.dart';
+// import 'package:newsviews/screens/otp.dart';
 import 'package:flutter/cupertino.dart';
-
+import 'package:newsviews/widgets/backButton.dart';
 
 // import 'package:google_fonts/google_fonts.dart';
 class settingsScreen extends StatefulWidget {
@@ -16,89 +17,13 @@ class settingsScreen extends StatefulWidget {
 class _settingsScreenState extends State<settingsScreen> {
   // static const keyLanguage = "key-Language";
   bool isSwitched = true;
-  bool isNotiSwitched=true;
+  bool isNotiSwitched = true;
   String? textValueChoose;
-  List textSizeList=["Size 1","Size 2","Size 3","Size 4"];
+  List textSizeList = ["Size 1", "Size 2", "Size 3", "Size 4"];
   String? langValueChoose;
-  List langList=["English","हिंदी"];
+  List langList = ["English", "हिंदी"];
   @override
   Widget build(BuildContext context) {
-    // Widget buildTellYourFriend() => SimpleSettingsTile(
-    //       title: "Tell Your Friend",
-    //       subtitle: '',
-    //       leading: Icon(Icons.people_rounded),
-    //       child: Row(
-    //         children: [Icon(Icons.abc)],),
-    //     );
-    // Widget buildHelp() => SimpleSettingsTile(
-    //       title: "Help",
-    //       subtitle: '',
-    //       leading: Icon(Icons.help),
-    //       child: Row(
-    //         children: [Icon(Icons.abc)],),
-    //     );
-    // Widget buildAbout() => SimpleSettingsTile(
-    //       title: "About",
-    //       subtitle: '',
-    //       leading: Icon(Icons.info),
-    //       child: Row(
-    //         children: [Icon(Icons.abc)],),
-    //     );
-    // Widget buildReportABug() => SimpleSettingsTile(
-    //       title: "Report A Bug",
-    //       subtitle: '',
-    //       leading: Icon(Icons.bug_report_outlined),
-    //       child: Row(
-    //         children: [Icon(Icons.abc)],),
-    //     );
-    // Widget buildSendFeedback() => SimpleSettingsTile(
-    //       title: "Send Feedback",
-    //       subtitle: '',
-    //       leading: Icon(Icons.feedback_outlined),
-    //       child: Row(
-    //         children: [Icon(Icons.abc)],),
-    //     );
-
-    // Widget buildLanguage() => DropDownSettingsTile(
-    //     title: "Language",
-    //     leading: Icon(Icons.language_outlined),
-    //     settingKey: keyLanguage,
-    //     selected: 1,
-    //     values: <int, String>{1: "Eng(Ind)", 2: "Hindi"});
-    // Widget buildFontSettings() => SimpleSettingsTile(
-    //       title: "Font Settings",
-    //       subtitle: '',
-    //       leading: Icon(Icons.settings),
-    //       child: Row(
-    //         children: [Icon(Icons.abc)],),
-    //     );
-    // Widget buildNotifications() => SimpleSettingsTile(
-    //       title: "Notifications",
-    //       subtitle: '',
-    //       leading: Icon(Icons.notifications_active_outlined),
-    //       child: Row(
-    //         children: [Icon(Icons.abc)],),
-    //     );
-    // Widget buildYourBookmarks() => SimpleSettingsTile(
-    //       title: "Your Bookmarks",
-    //       subtitle: '',
-    //       leading: Icon(Icons.bookmark_added_outlined),
-    //       child: Row(
-    //         children: [Icon(Icons.abc)],),
-    //     );
-    // Widget buildQuickPreferenceBar() => SimpleSettingsTile(
-    //       title: "Quick Preference Bar",
-    //       subtitle: '',
-    //       leading: Icon(Icons.remove_red_eye_outlined),
-    //       child: Row(
-    //         children: [Icon(Icons.abc)],),
-    //     );
-    // Widget buildEraseRelevanceHistory() => SimpleSettingsTile(
-    //       title: "Erase Relevance History",
-    //       subtitle: '',
-    //       leading: Icon(Icons.cancel_outlined),
-    //     );
-
     return SafeArea(
       child: Scaffold(
         extendBodyBehindAppBar: true,
@@ -108,29 +33,15 @@ class _settingsScreenState extends State<settingsScreen> {
           // scrolledUnderElevation: 1,
           // elevation: 0.0,
           backgroundColor: Colors.transparent,
-          leading: IconButton(
-            style: ButtonStyle(
-                minimumSize:
-                    MaterialStateProperty.all<Size>(const Size.fromRadius(22)),
-                shape: MaterialStateProperty.all<OutlinedBorder>(
-                    const CircleBorder()),
-                backgroundColor: MaterialStateProperty.all(
-                    const Color(0xFF444444).withOpacity(0.6))),
-            icon: const Icon(
-              Icons.arrow_back_ios_new_rounded,
-              weight: 40,
-              size: 22,
-              color: Color(0xFF00CCFF),
-            ),
-            onPressed: () => Navigator.of(context).pop(),
-          ),
+          leading: backButton(),
         ),
-        
-        backgroundColor: Color(0xFF060606),
+        backgroundColor: darkbgcolor,
         body: SingleChildScrollView(
           child: Column(
             children: [
-              SizedBox(height: 40,),
+              SizedBox(
+                height: 40,
+              ),
               Container(
                 padding: const EdgeInsets.symmetric(horizontal: 12.0),
                 child: Column(
@@ -154,7 +65,7 @@ class _settingsScreenState extends State<settingsScreen> {
                               height: 24,
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(100),
-                                  color: Color(0xFF00ccff).withOpacity(0.8)),
+                                  color: blueaccent.withOpacity(0.8)),
                               child: const Icon(
                                 Icons.mode_edit_outlined,
                                 size: 18,
@@ -170,7 +81,7 @@ class _settingsScreenState extends State<settingsScreen> {
                           fontFamily: 'Sansation',
                           letterSpacing: 3,
                           fontSize: 28,
-                          color: Color(0xFFfafafa)),
+                          color: white2),
                     ),
                     SizedBox(height: 3),
                     Text(
@@ -180,14 +91,13 @@ class _settingsScreenState extends State<settingsScreen> {
                           fontFamily: 'Harmattan-Bold',
                           letterSpacing: 0.5,
                           fontSize: 15,
-                          color: Color(0xFF999999)),
+                          color: grey4),
                     ),
-
                     SizedBox(height: 15),
                     Container(
                       // color: Color(0xff444444),
                       decoration: BoxDecoration(
-                          color: Color(0xff444444).withOpacity(0.25),
+                          color: grey2.withOpacity(0.25),
                           borderRadius: BorderRadius.all(Radius.circular(15))),
                       child: Column(
                         children: [
@@ -226,7 +136,8 @@ class _settingsScreenState extends State<settingsScreen> {
                                   children: [
                                     Switch(
                                       value: isSwitched,
-                                      activeTrackColor: Color(0xff333333).withOpacity(0.7),
+                                      activeTrackColor:
+                                          Color(0xff333333).withOpacity(0.7),
                                       activeColor: Color(0xFF00CCFF),
                                       onChanged: (darkvalue) {
                                         setState(() {
@@ -245,7 +156,6 @@ class _settingsScreenState extends State<settingsScreen> {
                         ],
                       ),
                     ),
-
                     SizedBox(height: 15),
                     Container(
                       // color: Color(0xff444444),
@@ -272,14 +182,13 @@ class _settingsScreenState extends State<settingsScreen> {
                                 style: TextStyle(
                                     fontFamily: 'Harmattan-Bold',
                                     fontSize: 22,
-                                    
                                     color: Color(0xFFfafafa).withOpacity(0.7)),
                               )
                             ],
                           ),
-
                           Padding(
-                            padding: const EdgeInsets.only(left: 8,right: 8,bottom:8),
+                            padding: const EdgeInsets.only(
+                                left: 8, right: 8, bottom: 8),
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
@@ -304,8 +213,6 @@ class _settingsScreenState extends State<settingsScreen> {
                                         style: TextStyle(
                                           fontFamily: 'Harmattan',
                                           fontSize: 21,
-                                          
-                                          
                                           color: Color(0xFFfafafa)
                                               .withOpacity(0.7),
                                         ),
@@ -328,7 +235,6 @@ class _settingsScreenState extends State<settingsScreen> {
                               ],
                             ),
                           ),
-                          
                           Divider(
                             thickness: 0.2,
                             color: Color(0xFF333333),
@@ -361,7 +267,6 @@ class _settingsScreenState extends State<settingsScreen> {
                                         style: TextStyle(
                                           fontFamily: 'Harmattan',
                                           fontSize: 21,
-                                          
                                           color: Color(0xFFfafafa)
                                               .withOpacity(0.7),
                                         ),
@@ -384,7 +289,6 @@ class _settingsScreenState extends State<settingsScreen> {
                               ],
                             ),
                           ),
-                          
                           Divider(
                             thickness: 0.2,
                             color: Color(0xFF333333),
@@ -417,7 +321,6 @@ class _settingsScreenState extends State<settingsScreen> {
                                         style: TextStyle(
                                           fontFamily: 'Harmattan',
                                           fontSize: 21,
-                                          
                                           color: Color(0xFFfafafa)
                                               .withOpacity(0.7),
                                         ),
@@ -440,11 +343,9 @@ class _settingsScreenState extends State<settingsScreen> {
                               ],
                             ),
                           ),
-                         
                         ],
                       ),
                     ),
-
                     SizedBox(height: 15),
                     Container(
                       // color: Color(0xff444444),
@@ -471,14 +372,13 @@ class _settingsScreenState extends State<settingsScreen> {
                                 style: TextStyle(
                                     fontFamily: 'Harmattan-Bold',
                                     fontSize: 22,
-                                    
                                     color: Color(0xFFfafafa).withOpacity(0.7)),
                               )
                             ],
                           ),
-
                           Padding(
-                            padding: const EdgeInsets.only(left: 8,right: 8,bottom:8),
+                            padding: const EdgeInsets.only(
+                                left: 8, right: 8, bottom: 8),
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
@@ -503,7 +403,6 @@ class _settingsScreenState extends State<settingsScreen> {
                                         style: TextStyle(
                                           fontFamily: 'Harmattan',
                                           fontSize: 21,
-                                          
                                           color: Color(0xFFfafafa)
                                               .withOpacity(0.7),
                                         ),
@@ -513,11 +412,15 @@ class _settingsScreenState extends State<settingsScreen> {
                                 ),
                                 Row(
                                   children: [
-                                    Transform.scale(scaleX: 0.85,scaleY: 0.8,
+                                    Transform.scale(
+                                      scaleX: 0.85,
+                                      scaleY: 0.8,
                                       child: Switch(
                                         value: isNotiSwitched,
-                                        activeTrackColor: Color(0xff333333).withOpacity(0.7),
-                                        activeColor: Color(0xFF00CCFF).withOpacity(0.7),
+                                        activeTrackColor:
+                                            Color(0xff333333).withOpacity(0.7),
+                                        activeColor:
+                                            Color(0xFF00CCFF).withOpacity(0.7),
                                         onChanged: (notivalue) {
                                           setState(() {
                                             isNotiSwitched = notivalue;
@@ -533,7 +436,6 @@ class _settingsScreenState extends State<settingsScreen> {
                               ],
                             ),
                           ),
-                          
                           Divider(
                             thickness: 0.2,
                             color: Color(0xFF333333),
@@ -550,7 +452,6 @@ class _settingsScreenState extends State<settingsScreen> {
                               style: TextStyle(
                                 fontFamily: 'Harmattan',
                                 fontSize: 21,
-                                
                                 color: Color(0xFFfafafa).withOpacity(0.7),
                               ),
                             ),
@@ -566,7 +467,8 @@ class _settingsScreenState extends State<settingsScreen> {
                                 horizontal: 14, vertical: 0),
                             children: [
                               Padding(
-                                padding: const EdgeInsets.only(left: 8,right: 8,bottom:6),
+                                padding: const EdgeInsets.only(
+                                    left: 8, right: 8, bottom: 6),
                                 child: Row(
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
@@ -589,7 +491,6 @@ class _settingsScreenState extends State<settingsScreen> {
                                           style: TextStyle(
                                             fontFamily: 'Harmattan',
                                             fontSize: 20,
-                                            
                                             color: Color(0xFFfafafa)
                                                 .withOpacity(0.7),
                                           ),
@@ -598,41 +499,55 @@ class _settingsScreenState extends State<settingsScreen> {
                                     ),
                                     Row(
                                       children: [
-                                        
-                                        Container(decoration: BoxDecoration(color: Color(0xff444444).withOpacity(0.2),borderRadius: BorderRadius.circular(10)),
+                                        Container(
+                                          decoration: BoxDecoration(
+                                              color: Color(0xff444444)
+                                                  .withOpacity(0.2),
+                                              borderRadius:
+                                                  BorderRadius.circular(10)),
                                           child: DropdownButton(
-                                            padding: EdgeInsets.symmetric(vertical: 5,horizontal:4),
-                                            
+                                            padding: EdgeInsets.symmetric(
+                                                vertical: 5, horizontal: 4),
                                             elevation: 10,
                                             isDense: true,
                                             underline: SizedBox(),
-                                            borderRadius: BorderRadius.circular(15),
+                                            borderRadius:
+                                                BorderRadius.circular(15),
                                             alignment: Alignment.center,
                                             style: TextStyle(
                                               fontFamily: 'Harmattan',
                                               fontSize: 18,
-                                              
-                                        
-                                              
                                               color: Color(0xFFdadada)
                                                   .withOpacity(0.7),
                                             ),
-                                            hint: Text("Select",style: TextStyle(fontSize: 16,color: Color(0xFFdadada).withOpacity(0.7)), ),
+                                            hint: Text(
+                                              "Select",
+                                              style: TextStyle(
+                                                  fontSize: 16,
+                                                  color: Color(0xFFdadada)
+                                                      .withOpacity(0.7)),
+                                            ),
                                             disabledHint: Text("Select"),
-                                            icon: Icon(Icons.keyboard_arrow_down_rounded,color: Color(0xFF344444),
-                                                                              size: 20,),
-                                                                              dropdownColor: Color(0xff262626),
-                                                                              
+                                            icon: Icon(
+                                              Icons.keyboard_arrow_down_rounded,
+                                              color: Color(0xFF344444),
+                                              size: 20,
+                                            ),
+                                            dropdownColor: Color(0xff262626),
                                             value: textValueChoose,
-                                            items: textSizeList.map((valueItem){return DropdownMenuItem(value: valueItem,alignment: Alignment.center,child: Text(valueItem));} ).toList(),
+                                            items:
+                                                textSizeList.map((valueItem) {
+                                              return DropdownMenuItem(
+                                                  value: valueItem,
+                                                  alignment: Alignment.center,
+                                                  child: Text(valueItem));
+                                            }).toList(),
                                             onChanged: (newValue) {
                                               setState(() {
-                                                textValueChoose = newValue as String;
+                                                textValueChoose =
+                                                    newValue as String;
                                               });
                                             },
-                                            
-                                        
-                                            
                                           ),
                                         ),
                                         Padding(
@@ -673,7 +588,6 @@ class _settingsScreenState extends State<settingsScreen> {
                                           style: TextStyle(
                                             fontFamily: 'Harmattan',
                                             fontSize: 20,
-                                            
                                             color: Color(0xFFfafafa)
                                                 .withOpacity(0.7),
                                           ),
@@ -682,41 +596,55 @@ class _settingsScreenState extends State<settingsScreen> {
                                     ),
                                     Row(
                                       children: [
-                                        
-                                        Container(decoration: BoxDecoration(color: Color(0xff444444).withOpacity(0.2),borderRadius: BorderRadius.circular(10)),
+                                        Container(
+                                          decoration: BoxDecoration(
+                                              color: Color(0xff444444)
+                                                  .withOpacity(0.2),
+                                              borderRadius:
+                                                  BorderRadius.circular(10)),
                                           child: DropdownButton(
-                                            padding: EdgeInsets.symmetric(vertical: 5,horizontal:4),
-                                            
+                                            padding: EdgeInsets.symmetric(
+                                                vertical: 5, horizontal: 4),
                                             elevation: 10,
                                             isDense: true,
                                             underline: SizedBox(),
-                                            borderRadius: BorderRadius.circular(15),
+                                            borderRadius:
+                                                BorderRadius.circular(15),
                                             alignment: Alignment.center,
                                             style: TextStyle(
                                               fontFamily: 'Harmattan',
                                               fontSize: 18,
-                                              
-                                        
-                                              
                                               color: Color(0xFFdadada)
                                                   .withOpacity(0.7),
                                             ),
-                                            hint: Text("Select",style: TextStyle(fontSize: 16,color: Color(0xFFdadada).withOpacity(0.7)), ),
+                                            hint: Text(
+                                              "Select",
+                                              style: TextStyle(
+                                                  fontSize: 16,
+                                                  color: Color(0xFFdadada)
+                                                      .withOpacity(0.7)),
+                                            ),
                                             disabledHint: Text("Select"),
-                                            icon: Icon(Icons.keyboard_arrow_down_rounded,color: Color(0xFF344444),
-                                                                              size: 20,),
-                                                                              dropdownColor: Color(0xff262626),
-                                                                              
+                                            icon: Icon(
+                                              Icons.keyboard_arrow_down_rounded,
+                                              color: Color(0xFF344444),
+                                              size: 20,
+                                            ),
+                                            dropdownColor: Color(0xff262626),
                                             value: textValueChoose,
-                                            items: textSizeList.map((valueItem){return DropdownMenuItem(value: valueItem,alignment: Alignment.center,child: Text(valueItem));} ).toList(),
+                                            items:
+                                                textSizeList.map((valueItem) {
+                                              return DropdownMenuItem(
+                                                  value: valueItem,
+                                                  alignment: Alignment.center,
+                                                  child: Text(valueItem));
+                                            }).toList(),
                                             onChanged: (newValue) {
                                               setState(() {
-                                                textValueChoose = newValue as String;
+                                                textValueChoose =
+                                                    newValue as String;
                                               });
                                             },
-                                            
-                                        
-                                            
                                           ),
                                         ),
                                         Padding(
@@ -729,14 +657,14 @@ class _settingsScreenState extends State<settingsScreen> {
                               ),
                             ],
                           ),
-                         
                           Divider(
                             thickness: 0.2,
                             color: Color(0xFF333333),
                             height: 0,
                           ),
                           Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 8,vertical: 12),
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 8, vertical: 12),
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
@@ -758,7 +686,7 @@ class _settingsScreenState extends State<settingsScreen> {
                                       style: TextStyle(
                                         fontFamily: 'Harmattan',
                                         fontSize: 21,
-                                      letterSpacing: 1,
+                                        letterSpacing: 1,
                                         color:
                                             Color(0xFFfafafa).withOpacity(0.7),
                                       ),
@@ -766,53 +694,62 @@ class _settingsScreenState extends State<settingsScreen> {
                                   ],
                                 ),
                                 Row(
-                                      children: [
-                                        
-                                        Container(decoration: BoxDecoration(color: Color(0xff444444).withOpacity(0.2),borderRadius: BorderRadius.circular(10)),
-                                          child: DropdownButton(
-                                            padding: EdgeInsets.symmetric(vertical: 5,horizontal:4),
-                                            
-                                            elevation: 10,
-                                            isDense: true,
-                                            underline: SizedBox(),
-                                            borderRadius: BorderRadius.circular(15),
-                                            alignment: Alignment.center,
-                                            style: TextStyle(
-                                              fontFamily: 'Harmattan',
-                                              fontSize: 18,
-                                              
-                                        
-                                              
-                                              color: Color(0xFFdadada)
-                                                  .withOpacity(0.7),
-                                            ),
-                                           hint: Text("Select",style: TextStyle(color: Color(0xFFdadada).withOpacity(0.7)), ),
-                                            
-                                            icon: Icon(Icons.keyboard_arrow_down_rounded,color: Color(0xFF344444),
-                                                                              size: 25,),
-                                                                              dropdownColor: Color(0xff262626),
-                                                                              
-                                            value: langValueChoose,
-                                            items: langList.map((valueItem){return DropdownMenuItem(value: valueItem,alignment: Alignment.center,child: Text(valueItem));} ).toList(),
-                                            onChanged: (newValue) {
-                                              setState(() {
-                                                langValueChoose = newValue as String;
-                                              });
-                                            },
-                                            
-                                        
-                                            
-                                          ),
+                                  children: [
+                                    Container(
+                                      decoration: BoxDecoration(
+                                          color: Color(0xff444444)
+                                              .withOpacity(0.2),
+                                          borderRadius:
+                                              BorderRadius.circular(10)),
+                                      child: DropdownButton(
+                                        padding: EdgeInsets.symmetric(
+                                            vertical: 5, horizontal: 4),
+                                        elevation: 10,
+                                        isDense: true,
+                                        underline: SizedBox(),
+                                        borderRadius: BorderRadius.circular(15),
+                                        alignment: Alignment.center,
+                                        style: TextStyle(
+                                          fontFamily: 'Harmattan',
+                                          fontSize: 18,
+                                          color: Color(0xFFdadada)
+                                              .withOpacity(0.7),
                                         ),
-                                        Padding(
-                                            padding: EdgeInsets.symmetric(
-                                                horizontal: 10)),
-                                      ],
+                                        hint: Text(
+                                          "Select",
+                                          style: TextStyle(
+                                              color: Color(0xFFdadada)
+                                                  .withOpacity(0.7)),
+                                        ),
+                                        icon: Icon(
+                                          Icons.keyboard_arrow_down_rounded,
+                                          color: Color(0xFF344444),
+                                          size: 25,
+                                        ),
+                                        dropdownColor: Color(0xff262626),
+                                        value: langValueChoose,
+                                        items: langList.map((valueItem) {
+                                          return DropdownMenuItem(
+                                              value: valueItem,
+                                              alignment: Alignment.center,
+                                              child: Text(valueItem));
+                                        }).toList(),
+                                        onChanged: (newValue) {
+                                          setState(() {
+                                            langValueChoose =
+                                                newValue as String;
+                                          });
+                                        },
+                                      ),
                                     ),
+                                    Padding(
+                                        padding: EdgeInsets.symmetric(
+                                            horizontal: 10)),
+                                  ],
+                                ),
                               ],
                             ),
                           ),
-                         
                         ],
                       ),
                     ),
@@ -842,14 +779,13 @@ class _settingsScreenState extends State<settingsScreen> {
                                 style: TextStyle(
                                     fontFamily: 'Harmattan-Bold',
                                     fontSize: 22,
-                                    
                                     color: Color(0xFFfafafa).withOpacity(0.7)),
                               )
                             ],
                           ),
-
                           Padding(
-                            padding: const EdgeInsets.only(left: 8,right: 8,bottom:8),
+                            padding: const EdgeInsets.only(
+                                left: 8, right: 8, bottom: 8),
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
@@ -874,7 +810,6 @@ class _settingsScreenState extends State<settingsScreen> {
                                         style: TextStyle(
                                           fontFamily: 'Harmattan',
                                           fontSize: 21,
-                                          
                                           color: Color(0xFFfafafa)
                                               .withOpacity(0.7),
                                         ),
@@ -897,7 +832,6 @@ class _settingsScreenState extends State<settingsScreen> {
                               ],
                             ),
                           ),
-                          
                           Divider(
                             thickness: 0.2,
                             color: Color(0xFF333333),
@@ -930,7 +864,6 @@ class _settingsScreenState extends State<settingsScreen> {
                                         style: TextStyle(
                                           fontFamily: 'Harmattan',
                                           fontSize: 21,
-                                          
                                           color: Color(0xFFfafafa)
                                               .withOpacity(0.7),
                                         ),
@@ -953,9 +886,6 @@ class _settingsScreenState extends State<settingsScreen> {
                               ],
                             ),
                           ),
-                          
-                          
-                         
                         ],
                       ),
                     ),
@@ -985,14 +915,13 @@ class _settingsScreenState extends State<settingsScreen> {
                                 style: TextStyle(
                                     fontFamily: 'Harmattan-Bold',
                                     fontSize: 22,
-                                    
                                     color: Color(0xFFfafafa).withOpacity(0.7)),
                               )
                             ],
                           ),
-
                           Padding(
-                            padding: const EdgeInsets.only(left: 8,right: 8,bottom:8),
+                            padding: const EdgeInsets.only(
+                                left: 8, right: 8, bottom: 8),
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
@@ -1017,7 +946,6 @@ class _settingsScreenState extends State<settingsScreen> {
                                         style: TextStyle(
                                           fontFamily: 'Harmattan',
                                           fontSize: 21,
-                                          
                                           color: Color(0xFFfafafa)
                                               .withOpacity(0.7),
                                         ),
@@ -1040,7 +968,6 @@ class _settingsScreenState extends State<settingsScreen> {
                               ],
                             ),
                           ),
-                          
                           Divider(
                             thickness: 0.2,
                             color: Color(0xFF333333),
@@ -1073,7 +1000,6 @@ class _settingsScreenState extends State<settingsScreen> {
                                         style: TextStyle(
                                           fontFamily: 'Harmattan',
                                           fontSize: 21,
-                                          
                                           color: Color(0xFFfafafa)
                                               .withOpacity(0.7),
                                         ),
@@ -1096,7 +1022,6 @@ class _settingsScreenState extends State<settingsScreen> {
                               ],
                             ),
                           ),
-                          
                           Divider(
                             thickness: 0.2,
                             color: Color(0xFF333333),
@@ -1129,7 +1054,6 @@ class _settingsScreenState extends State<settingsScreen> {
                                         style: TextStyle(
                                           fontFamily: 'Harmattan',
                                           fontSize: 21,
-                                          
                                           color: Color(0xFFfafafa)
                                               .withOpacity(0.7),
                                         ),
@@ -1152,12 +1076,9 @@ class _settingsScreenState extends State<settingsScreen> {
                               ],
                             ),
                           ),
-                         
                         ],
                       ),
                     ),
-
-                    
                     Container(
                       padding: const EdgeInsets.symmetric(vertical: 15.0),
                       child: SizedBox(
@@ -1172,7 +1093,7 @@ class _settingsScreenState extends State<settingsScreen> {
                               children: [
                                 Icon(
                                   Icons.logout_outlined,
-                                  color: Color(0xFFb80f0a).withOpacity(0.5),
+                                  color: crimsonred.withOpacity(0.5),
                                   size: 15,
                                 ),
                                 Padding(
@@ -1184,8 +1105,7 @@ class _settingsScreenState extends State<settingsScreen> {
                                         fontSize: 14,
                                         letterSpacing: 1,
                                         fontWeight: FontWeight.w600,
-                                        color: Color(0xFFb80f0a)
-                                            .withOpacity(0.5))),
+                                        color: crimsonred.withOpacity(0.5))),
                               ],
                             ),
                             style: ElevatedButton.styleFrom(

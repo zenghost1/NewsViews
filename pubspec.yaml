@@ -37,6 +37,9 @@ dependencies:
   smooth_page_indicator: ^1.1.0
   material_design_icons_flutter: ^5.0.6595
   google_fonts: ^5.1.0
+  provider: ^6.0.1
+  flutter_snake_navigationbar: ^0.6.1
+  video_player: ^2.7.1
   flutter_settings_screens: ^0.3.3-null-safety+2
   flutter_native_splash: ^2.3.0
   flip_card: ^0.7.0
@@ -48,6 +51,9 @@ flutter_native_splash:
   color: "#060606"
   image_dark: assets/newsViewsLogo.png
   color_dark: "#060606"
+  provider: ^6.0.1
+  flutter_snake_navigationbar: ^0.6.1
+  video_player: ^2.7.1
 
 dev_dependencies:
   flutter_test:
@@ -115,3 +121,4 @@ flutter:
         - asset: fonts/RubikOne-Regular.ttf
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+ 

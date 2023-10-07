@@ -1,7 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:newsviews/core/themes/themes.dart';
 import 'package:newsviews/screens/otp.dart';
 import 'package:newsviews/screens/signin.dart';
 import 'package:newsviews/screens/walk3.dart';
+import 'package:newsviews/widgets/backButton.dart';
+import 'package:newsviews/widgets/blueWhiteHeading.dart';
+import 'package:newsviews/widgets/boldTextFuncs.dart';
+import 'package:newsviews/widgets/formField.dart';
+import 'package:newsviews/widgets/inkWellBlue.dart';
+import 'package:newsviews/widgets/obsecureFormField.dart';
+import 'package:newsviews/widgets/onBoardingButton.dart';
+import 'package:newsviews/widgets/smallTextFunc.dart';
 // import 'package:google_fonts/google_fonts.dart';
 
 class signup extends StatefulWidget {
@@ -12,13 +21,6 @@ class signup extends StatefulWidget {
 }
 
 class _signupState extends State<signup> {
-  bool _passwordVisible = false;
-
-  @override
-  void initState() {
-    super.initState();
-    _passwordVisible = false;
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -31,24 +33,9 @@ class _signupState extends State<signup> {
           // scrolledUnderElevation: 1,
           // elevation: 0.0,
           backgroundColor: Colors.transparent,
-          leading: IconButton(
-            style: ButtonStyle(
-                minimumSize:
-                    MaterialStateProperty.all<Size>(const Size.fromRadius(22)),
-                shape: MaterialStateProperty.all<OutlinedBorder>(
-                    const CircleBorder()),
-                backgroundColor: MaterialStateProperty.all(
-                    const Color(0xFF444444).withOpacity(0.6))),
-            icon: const Icon(
-              Icons.arrow_back_ios_new_rounded,
-              weight: 40,
-              size: 22,
-              color: Color(0xFF00CCFF),
-            ),
-            onPressed: () => Navigator.of(context).pop(),
-          ),
+          leading: backButton(),
         ),
-        backgroundColor: const Color(0xFF060606),
+        backgroundColor: darkbgcolor,
         body: SingleChildScrollView(
           child: Column(
             children: [
@@ -64,34 +51,14 @@ class _signupState extends State<signup> {
                       children: [
                         Align(
                           alignment: Alignment.centerLeft,
-                          child: Text(
-                            "Create a ",
-                            style: TextStyle(
-                                height: 0.7,
-                                fontFamily: 'Sansation-Bold',
-                                fontSize: 24,
-                                color: Color(0xFFDADADA)),
-                          ),
+                          child: blueWhiteHeading(s: "Dont have an account?",rang: white3,),
                         ),
-                        Text(
-                          "NewsViews ",
-                          style: TextStyle(
-                              height: 0.7,
-                              fontFamily: 'Sansation-Bold',
-                              fontSize: 24,
-                              color: Color(0xFF00CCFF)),
-                        ),
+                        blueWhiteHeading(s: "NewsViews ", rang: blueaccent),
                       ],
                     ),
                     const Align(
                       alignment: Alignment.centerLeft,
-                      child: Text(
-                        "account",
-                        style: TextStyle(
-                            fontFamily: 'Sansation-Bold',
-                            fontSize: 24,
-                            color: Color(0xFFDADADA)),
-                      ),
+                      child: boldTextFuncs(s: "account"),
                     ),
                     Form(
                         child: Container(
@@ -127,159 +94,26 @@ class _signupState extends State<signup> {
                                     borderRadius: BorderRadius.circular(10))),
                           ),
                           const SizedBox(height: 8),
-                          TextFormField(
-                            style: const TextStyle(
-                                fontSize: 13, fontFamily: 'Sansation-bold'),
-                            decoration: InputDecoration(
-                                floatingLabelBehavior:
-                                    FloatingLabelBehavior.never,
-                                filled: true,
-                                fillColor: const Color(0xFFDADADA),
-                                hintText: "Enter your Email",
-                                labelText: "Email",
-                                contentPadding: const EdgeInsets.symmetric(
-                                    vertical: 4, horizontal: 12),
-                                labelStyle: const TextStyle(
-                                    fontFamily: 'Sansation-Bold',
-                                    fontSize: 15,
-                                    color: Color(0xFF999999)),
-                                hintStyle: const TextStyle(
-                                    fontFamily: 'Sansation-Bold',
-                                    fontSize: 13,
-                                    color: Color(0xFF999999)),
-                                enabledBorder: OutlineInputBorder(
-                                    borderRadius: BorderRadius.circular(10)),
-                                focusedBorder: OutlineInputBorder(
-                                    borderSide: const BorderSide(
-                                        color: Color(0xFF00CCFF), width: 2.5),
-                                    borderRadius: BorderRadius.circular(10))),
-                          ),
+                          formField(hint: "Enter Your Email", label: "Email"),
                           const SizedBox(height: 8),
-                          TextFormField(
-                            style: const TextStyle(
-                                fontSize: 13, fontFamily: 'Sansation-bold'),
-                            decoration: InputDecoration(
-                                floatingLabelBehavior:
-                                    FloatingLabelBehavior.never,
-                                filled: true,
-                                fillColor: const Color(0xFFDADADA),
-                                hintText: "Enter Your Phone Number",
-                                labelText: "Phone Number",
-                                contentPadding: const EdgeInsets.symmetric(
-                                    vertical: 4, horizontal: 12),
-                                labelStyle: const TextStyle(
-                                    fontFamily: 'Sansation-Bold',
-                                    fontSize: 15,
-                                    color: Color(0xFF999999)),
-                                hintStyle: const TextStyle(
-                                    fontFamily: 'Sansation-Bold',
-                                    fontSize: 13,
-                                    color: Color(0xFF999999)),
-                                enabledBorder: OutlineInputBorder(
-                                    borderRadius: BorderRadius.circular(10)),
-                                focusedBorder: OutlineInputBorder(
-                                    borderSide: const BorderSide(
-                                        color: Color(0xFF00CCFF), width: 2.5),
-                                    borderRadius: BorderRadius.circular(10))),
-                          ),
+                          formField(hint: "Enter Your Phone Number", label: "Phone Number"),
                           const SizedBox(height: 8),
-                          TextFormField(
-                            style: const TextStyle(
-                                fontSize: 13, fontFamily: 'Sansation-bold'),
-                            obscureText: true,
-                            decoration: InputDecoration(
-                                floatingLabelBehavior:
-                                    FloatingLabelBehavior.never,
-                                filled: true,
-                                fillColor: const Color(0xFFDADADA),
-                                hintText: "Enter Your Password",
-                                labelText: "Password",
-                                suffixIcon: IconButton(
-                                    onPressed: () {
-                                      setState(() {
-                                        _passwordVisible = !_passwordVisible;
-                                      });
-                                    },
-                                    icon: Icon(
-                                      _passwordVisible
-                                          ? Icons.remove_red_eye_sharp
-                                          : Icons.visibility_off,
-                                      color: const Color(0xFF999999),
-                                    )),
-                                contentPadding: const EdgeInsets.symmetric(
-                                    vertical: 4, horizontal: 12),
-                                labelStyle: const TextStyle(
-                                    fontFamily: 'Sansation-Bold',
-                                    fontSize: 15,
-                                    color: Color(0xFF999999)),
-                                hintStyle: const TextStyle(
-                                    fontFamily: 'Sansation-Bold',
-                                    fontSize: 13,
-                                    color: Color(0xFF999999)),
-                                enabledBorder: OutlineInputBorder(
-                                    borderRadius: BorderRadius.circular(10)),
-                                focusedBorder: OutlineInputBorder(
-                                    borderSide: const BorderSide(
-                                        color: Color(0xFF00CCFF), width: 2.5),
-                                    borderRadius: BorderRadius.circular(10))),
-                          ),
+                          obsecureFormField(hint: "Enter Your Password", label: "Password"),
                         ],
                       ),
                     )),
                     Container(
                       padding: const EdgeInsets.symmetric(vertical: 20.0),
-                      child: SizedBox(
-                        width: double.infinity,
-                        child: Container(
-                          decoration: ShapeDecoration(
-                              shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(10.0)),
-                              gradient: const LinearGradient(colors: [
-                                Color(0xFF00ACD7),
-                                Color(0xFF002E3A)
-                              ])),
-                          child: ElevatedButton(
-                            child: const Text("Sign Up",
-                                style: TextStyle(
-                                    fontFamily: 'Sansation-Bold',
-                                    fontSize: 22,
-                                    letterSpacing: 1.5,
-                                    fontWeight: FontWeight.w600,
-                                    color: Color(0xFFdadada))),
-                            style: ElevatedButton.styleFrom(
-                                tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-                                primary: Colors.transparent,
-                                shadowColor: Colors.transparent,
-                                padding: const EdgeInsets.symmetric(
-                                    horizontal: 40.0, vertical: 10.0),
-                                shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(5.0))),
-                            onPressed: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => const otp()));
-                            },
-                          ),
-                        ),
-                      ),
+                      child: onboardingButton(name: "Sign Up", screenName: otp()),
                     ),
                     const Row(children: <Widget>[
                       Expanded(child: Divider(thickness: 0.1)),
-                      Text("    OR    ",
-                          style: TextStyle(
-                              fontFamily: 'Sansation-Bold',
-                              fontSize: 13,
-                              color: Color(0xFF999999))),
+                      small13TextFunc(s: "    OR    "),
                       Expanded(child: Divider(thickness: 0.1)),
                     ]),
                     const Padding(
                       padding: EdgeInsets.symmetric(vertical: 10.0),
-                      child: Text("Continue With",
-                          style: TextStyle(
-                              fontFamily: 'Sansation-Bold',
-                              fontSize: 13,
-                              color: Color(0xFF999999))),
+                      child: small13TextFunc(s: "Continue With"),
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -341,27 +175,8 @@ class _signupState extends State<signup> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    const Text(
-                      "Already have an account",
-                      style: TextStyle(
-                          fontFamily: 'Sansation',
-                          fontSize: 13,
-                          color: Color(0xFF999999)),
-                    ),
-                    InkWell(
-                        onTap: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => const signin()));
-                        },
-                        child: const Text(
-                          " Sign In",
-                          style: TextStyle(
-                              fontFamily: 'Sansation-Bold',
-                              fontSize: 15,
-                              color: Color(0xFF00CCFF)),
-                        )),
+                    small13TextFunc(s: "Already have an account"),
+                    inkWellBlue(s: " Sign In", whereTo: signin(), size: 15),
                   ],
                 ),
               ),
@@ -372,3 +187,4 @@ class _signupState extends State<signup> {
     );
   }
 }
+

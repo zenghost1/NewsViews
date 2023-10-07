@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-
+import 'package:newsviews/core/themes/themes.dart';
+import 'package:newsviews/widgets/walkDesc.dart';
+import 'package:newsviews/widgets/walkHeading.dart';
+import 'package:newsviews/widgets/walkImage.dart';
 
 class Walk1Screen extends StatelessWidget {
   const Walk1Screen({super.key});
@@ -7,38 +10,25 @@ class Walk1Screen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      backgroundColor: Color(0xFF060606),
+      backgroundColor: darkbgcolor,
       body: Column(
         children: [
           SizedBox(height: 100),
-          Image(
-            image: AssetImage("assets/hand.png"),
-            height: 200,
-            fit: BoxFit.cover,
+          walkImage(
+            path: "assets/hand.png",
           ),
           SizedBox(
             height: 60,
           ),
-          Text(
-            'Revolutionizing',
-            style: TextStyle(fontFamily: "Sansation-Bold",height: 1,fontSize: 35, color: Color(0xffdadada)),
+          walkHeading(
+            text: 'Revolutionizing',
+            rang: white3,
           ),
-          
-              Text(
-                'News Delivery With',
-                style: TextStyle(fontFamily: "Sansation-Bold",height: 1,fontSize: 35, color: Color(0xffdadada)),
-              ),
-              Row(
+          walkHeading(text: 'News Delivery With', rang: white3),
+          Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text(
-                'Short Videos',
-                style: TextStyle(
-                  fontFamily: "Sansation-Bold",height: 1,fontSize: 35,
-                  color: Color(0xFF00CCFF),
-                ),
-              ),
-              
+              walkHeading(text: 'Short Videos', rang: blueaccent),
             ],
           ),
           SizedBox(
@@ -46,10 +36,9 @@ class Walk1Screen extends StatelessWidget {
           ),
           Padding(
             padding: EdgeInsetsDirectional.symmetric(horizontal: 30),
-            child: Text(
-              'Experience news like never before with our engaging app. Dive into intriguing short video news update.',
-              style: TextStyle(fontFamily: "Sansation",height: 1.3,fontSize: 16, color: Color(0xff999999)),
-              textAlign: TextAlign.center,
+            child: walkDesc(
+              text:
+                  'Experience news like never before with our engaging app. Dive into intriguing short video news update.',
             ),
           ),
         ],
