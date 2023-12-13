@@ -1,4 +1,5 @@
 import 'dart:math';
+import 'package:newsviews/widgets/remoteVideoPlayer.dart';
 import 'package:video_player/video_player.dart';
 
 import 'package:flutter/material.dart';
@@ -37,17 +38,17 @@ class _TinderCardState extends State<TinderCard> {
       provider.setScreenSize(size);
     });
 
-    controller = VideoPlayerController.asset(asset)
-      ..addListener(() {
-        setState(() {});
-      })
-      ..setLooping(true)
-      ..initialize().then((_) => controller.play());
+    // controller = VideoPlayerController.asset(asset)
+    //   ..addListener(() {
+    //     setState(() {});
+    //   })
+    //   ..setLooping(true)
+    //   ..initialize().then((_) => controller.play());
   }
 
   @override
   void dispose() {
-    controller.dispose();
+    // controller.dispose();
     super.dispose();
   }
 
@@ -144,17 +145,19 @@ class _TinderCardState extends State<TinderCard> {
   Widget buildVideoCard() => buildCardShadow(
           child: ClipRRect(
         borderRadius: BorderRadius.circular(20),
-        child: controller.value.isInitialized
-            ? Container(
+        child: 
+        // controller.value.isInitialized
+        //     ? 
+            Container(
                 alignment: Alignment.topCenter,
-                child: buildVideo(),
+                child: RemoteVideoPlayer(),
               )
-            : Center(
-                child: CircularProgressIndicator(),
-              ),
+            // : Center(
+            //     child: CircularProgressIndicator(),
+            //   ),
       ));
 
-  Widget buildVideo() => VideoPlayer(controller);
+  // Widget buildVideo() => VideoPlayer(controller);
 
   Widget buildCardShadow({required Widget child}) {
     final provider = Provider.of<CardProvider>(context);
@@ -306,3 +309,4 @@ class _TinderCardState extends State<TinderCard> {
         ],
       );
 }
+
