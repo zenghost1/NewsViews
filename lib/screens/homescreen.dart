@@ -30,6 +30,7 @@ class _HomeScreenState extends State<HomeScreen> {
         child: Scaffold(
           extendBody: true,
           bottomNavigationBar: SnakeNavigationBar.color(
+            height: 70,
             backgroundColor: Color(0xFF999999).withOpacity(0.3),
             behaviour: SnakeBarBehaviour.floating,
             snakeShape: const SnakeShape(
@@ -39,7 +40,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 padding: EdgeInsets.all(4)),
             shape: const RoundedRectangleBorder(
                 borderRadius: BorderRadius.all(Radius.circular(50))),
-            padding: const EdgeInsets.only(bottom: 20, right: 50, left: 50),
+            padding: const EdgeInsets.only(bottom: 30, right: 50, left: 50),
             snakeViewColor: Color(0xFFdadada),
             selectedItemColor: Colors.black,
             unselectedItemColor: Colors.white,

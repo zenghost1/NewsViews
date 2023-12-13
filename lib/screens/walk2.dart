@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-
+import 'package:newsviews/core/themes/themes.dart';
+import 'package:newsviews/widgets/walkDesc.dart';
+import 'package:newsviews/widgets/walkHeading.dart';
+import 'package:newsviews/widgets/walkImage.dart';
 
 class Walk2Screen extends StatelessWidget {
   const Walk2Screen({super.key});
@@ -7,51 +10,25 @@ class Walk2Screen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      backgroundColor: Color(0xFF060606),
+      backgroundColor: darkbgcolor,
       body: Column(
         children: [
           SizedBox(height: 100),
-          Image(
-            image: AssetImage("assets/hand2.png"),
-            height: 200,
-            fit: BoxFit.cover,
-          ),
+          walkImage(path: "assets/hand2.png"),
           SizedBox(
             height: 60,
           ),
-          Text(
-            'Elevate Your News',
-            style: TextStyle(fontFamily: "Sansation-Bold",height: 1,fontSize: 35, color: Color(0xffdadada)),
-          ),
-
-          Text(
-            'Experience with a',
-            style: TextStyle(fontFamily: "Sansation-Bold",height: 1,fontSize: 35, color: Color(0xffdadada)),
-          ),
-          // Text(
-          //   'News ',
-          //   style: TextStyle(
-          //     fontSize: 35,
-          //     color: Colors.white,
-          //   ),
-          // ),
-          Text(
-            'Swipe',
-            style: TextStyle(
-              fontFamily: "Sansation-Bold",height: 1,fontSize: 35,
-              color: Color(0xFF00CCFF),
-            ),
-          ),
+          walkHeading(text: 'Elevate Your News', rang: white3),
+          walkHeading(text: 'Experience with a', rang: white3),
+          walkHeading(text: 'Swipe', rang: blueaccent),
           SizedBox(
             height: 20,
           ),
           Padding(
             padding: EdgeInsetsDirectional.symmetric(horizontal: 30),
-            child: Text(
-              "Swipe right for what matters, left for what doesn't. Fine-tune your preferences with a simple swipe.",
-              style: TextStyle(fontFamily: "Sansation",height: 1.3,fontSize: 16, color: Color(0xff999999)),
-              textAlign: TextAlign.center,
-            ),
+            child: walkDesc(
+                text:
+                    "Swipe right for what matters, left for what doesn't. Fine-tune your preferences with a simple swipe."),
           )
         ],
       ),
